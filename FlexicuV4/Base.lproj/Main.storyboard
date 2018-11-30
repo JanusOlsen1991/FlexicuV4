@@ -89,7 +89,7 @@
         <!--Hjem-->
         <scene sceneID="WUf-S0-rYU">
             <objects>
-                <viewController id="4w5-zP-VSC" customClass="HovedMenu" customModule="FlexicuV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4w5-zP-VSC" customClass="HovedMenu" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uu7-IM-HDA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,39 +109,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gxv-uQ-8Sl">
-                                <rect key="frame" x="0.0" y="182" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="182" width="375" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KVa-8s-86r">
-                                    <size key="itemSize" width="131" height="131"/>
+                                    <size key="itemSize" width="131" height="113"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="udlejedeMCell" id="oTu-oX-v6F" customClass="UdlejedeMedarbejdereCollectionViewCell" customModule="FlexicuV2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-1.5" width="131" height="131"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="udlejedeMCell" id="oTu-oX-v6F" customClass="UdlejedeMedarbejdereCollectionViewCell" customModule="FlexicuV4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5" width="131" height="113"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="131" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="navn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3H1-nX-36K">
-                                                    <rect key="frame" x="0.0" y="20" width="131" height="21"/>
+                                                    <rect key="frame" x="0.0" y="12" width="131" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lejer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfS-Qd-Lb3">
-                                                    <rect key="frame" x="0.0" y="55" width="131" height="21"/>
+                                                    <rect key="frame" x="0.0" y="47" width="131" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lejeperiode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLn-gG-OVr">
-                                                    <rect key="frame" x="0.0" y="90" width="131" height="21"/>
+                                                    <rect key="frame" x="0.0" y="82" width="131" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -167,35 +167,35 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1PO-w3-g0V">
-                                    <size key="itemSize" width="131" height="131"/>
+                                    <size key="itemSize" width="131" height="88"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="alleMedarbejdereCell" id="mwa-BU-iAf" customClass="AlleMedarbejdereCVCell" customModule="FlexicuV2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-8" width="131" height="131"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="alleMedarbejdereCell" id="mwa-BU-iAf" customClass="AlleMedarbejdereCVCell" customModule="FlexicuV4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="13.5" width="131" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="131" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="131" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="navn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9V-wh-dzO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="134" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lejer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihZ-aJ-AKG">
-                                                    <rect key="frame" x="0.0" y="43" width="131" height="21"/>
+                                                    <rect key="frame" x="0.0" y="8" width="134" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lejeperiode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOy-bw-zB1">
-                                                    <rect key="frame" x="0.0" y="78" width="134" height="33"/>
+                                                    <rect key="frame" x="0.0" y="56" width="134" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lejer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihZ-aJ-AKG">
+                                                    <rect key="frame" x="0.0" y="33" width="131" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -226,7 +226,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lejetArbejdskraftCell" id="Kpt-zi-1z9" customClass="LejetArbejdskraftCVCell" customModule="FlexicuV2" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lejetArbejdskraftCell" id="Kpt-zi-1z9" customClass="LejetArbejdskraftCVCell" customModule="FlexicuV4" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-0.5" width="130" height="129"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -284,61 +284,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jr2-Xf-DDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="1514"/>
-        </scene>
-        <!--Udlej-->
-        <scene sceneID="jSa-eW-4L5">
-            <objects>
-                <viewController id="YHv-6w-eam" customClass="Udlej" customModule="FlexicuV2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="G3Q-vT-8cG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lyf-Kc-AxM">
-                                <rect key="frame" x="112.5" y="312" width="150.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivi-Cu-A7g">
-                                <rect key="frame" x="90.5" y="363" width="194.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmu-GW-56J">
-                                <rect key="frame" x="153" y="242" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="klikMig:" destination="YHv-6w-eam" eventType="touchUpInside" id="lQh-oO-Lts"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Ivi-Cu-A7g" firstAttribute="top" secondItem="lyf-Kc-AxM" secondAttribute="bottom" constant="8" symbolic="YES" id="21S-4g-ilT"/>
-                            <constraint firstAttribute="centerY" secondItem="lyf-Kc-AxM" secondAttribute="centerY" id="NZ7-th-8gH"/>
-                            <constraint firstItem="Ivi-Cu-A7g" firstAttribute="centerX" secondItem="lyf-Kc-AxM" secondAttribute="centerX" id="Tfa-yR-pcr"/>
-                            <constraint firstAttribute="centerX" secondItem="lyf-Kc-AxM" secondAttribute="centerX" id="XKt-WU-PZd"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0j8-uL-bgJ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Udlej" id="QvL-kY-PnK"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="label" destination="lyf-Kc-AxM" id="9vV-pv-X3c"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vJd-gk-aos" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1886" y="130"/>
+            <point key="canvasLocation" x="1885.5999999999999" y="1512.5937031484259"/>
         </scene>
         <!--Mine Medarbejdere-->
         <scene sceneID="MYm-7o-lMW">
             <objects>
-                <viewController storyboardIdentifier="MineMedarbejdere" id="9MN-g1-p7G" customClass="MineMedarbejdere" customModule="FlexicuV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MineMedarbejdere" id="9MN-g1-p7G" customClass="MineMedarbejdere" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BCR-BO-8c6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,32 +447,11 @@
         <!--Indbakke-->
         <scene sceneID="hbN-rp-9oC">
             <objects>
-                <viewController id="iCH-Nn-jxN" customClass="Indbakke" customModule="FlexicuV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iCH-Nn-jxN" customClass="Indbakke" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3GX-4A-aDT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fdi-Y8-i9v">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIb-Ha-DCl">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="dIb-Ha-DCl" firstAttribute="top" secondItem="Fdi-Y8-i9v" secondAttribute="bottom" constant="8" symbolic="YES" id="2e1-Dh-MtK"/>
-                            <constraint firstItem="dIb-Ha-DCl" firstAttribute="centerX" secondItem="Fdi-Y8-i9v" secondAttribute="centerX" id="fAV-3d-FSZ"/>
-                            <constraint firstAttribute="centerX" secondItem="Fdi-Y8-i9v" secondAttribute="centerX" id="fmg-hQ-Y9E"/>
-                            <constraint firstAttribute="centerY" secondItem="Fdi-Y8-i9v" secondAttribute="centerY" id="rSh-IX-s9Z"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zle-Yi-Uiz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Indbakke" id="iKE-fB-sX1"/>
@@ -529,12 +459,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw2-Rc-UdY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="2337"/>
+            <point key="canvasLocation" x="1885.5999999999999" y="2336.5817091454273"/>
         </scene>
         <!--Lej-->
         <scene sceneID="hq5-5w-i7I">
             <objects>
-                <viewController id="n9x-6Y-P7H" customClass="Lej" customModule="FlexicuV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="n9x-6Y-P7H" customClass="Lej" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CzT-yg-TX1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -562,7 +492,7 @@
         <!--Ny Bruger-->
         <scene sceneID="oPl-jE-FTi">
             <objects>
-                <viewController id="ShO-K9-WGN" customClass="NyBruger" customModule="FlexicuV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ShO-K9-WGN" customClass="NyBruger" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZ5-8g-Is6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -769,7 +699,7 @@
         <!--Login-->
         <scene sceneID="wtt-ms-IFO">
             <objects>
-                <viewController id="nsd-5L-Ax4" customClass="Login" customModule="FlexicuV2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nsd-5L-Ax4" customClass="Login" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yVr-3T-Cef">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -859,6 +789,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ic0-F4-cFx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l8k-6m-qz2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -866,12 +797,83 @@
                         <segue destination="4w5-zP-VSC" kind="relationship" relationship="viewControllers" id="udT-Nr-VOH"/>
                         <segue destination="iCH-Nn-jxN" kind="relationship" relationship="viewControllers" id="Xm5-Ph-R9r"/>
                         <segue destination="n9x-6Y-P7H" kind="relationship" relationship="viewControllers" id="G9Y-iX-v3y"/>
-                        <segue destination="YHv-6w-eam" kind="relationship" relationship="viewControllers" id="dTP-gR-gME"/>
+                        <segue destination="vHE-Y1-xCy" kind="relationship" relationship="viewControllers" id="oEc-99-GUq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnk-lT-NHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4" y="786.65667166416802"/>
+        </scene>
+        <!--Udlej-->
+        <scene sceneID="kvW-iv-NjK">
+            <objects>
+                <viewController id="vHE-Y1-xCy" customClass="Udlej" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xv0-me-W2x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-wG-xRF">
+                                <rect key="frame" x="0.0" y="146" width="409" height="472"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oZC-dv-XfJ">
+                                    <size key="itemSize" width="374" height="105"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="tXy-FQ-33m" customClass="CollectionViewCell" customModule="FlexicuV4" customModuleProvider="target">
+                                        <rect key="frame" x="17.5" y="0.0" width="374" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arbejdsområde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg7-nf-sMh">
+                                                    <rect key="frame" x="20" y="64" width="281" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQ3-wB-xlv">
+                                                    <rect key="frame" x="20" y="20" width="281" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="arbejdsområde" destination="Lg7-nf-sMh" id="NDf-Lb-FRJ"/>
+                                            <outlet property="navn" destination="UQ3-wB-xlv" id="xaU-Ye-hMm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vHE-Y1-xCy" id="ywu-SW-Nib"/>
+                                    <outlet property="delegate" destination="vHE-Y1-xCy" id="GGm-O4-w6O"/>
+                                </connections>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flexicu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="QgM-Qc-LhV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="124"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QgM-Qc-LhV" firstAttribute="top" secondItem="96R-T1-nCJ" secondAttribute="top" id="H75-pL-8Cs"/>
+                            <constraint firstItem="QgM-Qc-LhV" firstAttribute="leading" secondItem="96R-T1-nCJ" secondAttribute="leading" id="Y1P-KZ-K70"/>
+                            <constraint firstItem="QgM-Qc-LhV" firstAttribute="trailing" secondItem="96R-T1-nCJ" secondAttribute="trailing" id="l3J-yy-Sw1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="96R-T1-nCJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Udlej" id="x9T-el-Cwk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0c-u5-9Ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885.5999999999999" y="129.98500749625188"/>
         </scene>
     </scenes>
     <resources>

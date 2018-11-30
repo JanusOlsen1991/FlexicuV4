@@ -42,20 +42,27 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == CollectionView1 {
-        let cell: UdlejedeMedarbejdereCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: udlejedeMIdentifier, for: indexPath) as? UdlejedeMedarbejdereCollectionViewCell
+            let cell: UdlejedeMedarbejdereCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: udlejedeMIdentifier, for: indexPath) as? UdlejedeMedarbejdereCollectionViewCell
+            cell?.layer.borderWidth = 1.0
+            cell?.layer.borderColor = UIColor.gray.cgColor
             cell?.navnLabel.text = "Init All"
         return cell!
         } else if collectionView == CollectionView2{
             let cell: LejetArbejdskraftCVCell? = collectionView.dequeueReusableCell(withReuseIdentifier: lejetACVIdentifier, for: indexPath) as? LejetArbejdskraftCVCell
+            cell?.layer.borderWidth = 1.0
+            cell?.layer.borderColor = UIColor.gray.cgColor
             cell?.navnLabel.text = "Hej hej"
             return cell!
         } else{
             let cell: AlleMedarbejdereCVCell? = collectionView.dequeueReusableCell(withReuseIdentifier: alleMCVIdentifier, for: indexPath) as? AlleMedarbejdereCVCell
+            cell?.layer.borderWidth = 1.0
+            cell?.layer.borderColor = UIColor.gray.cgColor
             cell?.navnLabel.text = "Hej hej"
             cell?.lejetAfLabel.text = "Janus rules"
             return cell!
             
         }
+        
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
