@@ -8,12 +8,16 @@
 
 import UIKit
 
-class Udlej: UIViewController {
-
+class Udlej: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
-    @IBOutlet weak var label: UILabel!
+    let mNavn = ["Gunn", "Janus", "Christian", "Oliver", "Ahad"]
+    let mArbejdsområde = ["Smed", "Tørmer", "Lagermand", "Smed", "Lagermand"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    /*    collectionViewCell.layer.borderColor = UIColor.green.cgColor
+        collectionViewCell.layer.borderWidth = 3.0
+        collectionViewCell.layer.cornerRadius = 3.0//if you want corner radius.addtional*/
 
         // Do any additional setup after loading the view.
     }
@@ -23,20 +27,17 @@ class Udlej: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func klikMig(_ sender: Any) {
-        let v = "Hej Gunn"
-        
-        self.label.text = v
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell
+        cell?.layer.borderWidth = 1.0
+        cell?.layer.borderColor = UIColor.gray.cgColor
+        cell?.layer.cornerRadius = 3.0
+        cell?.navn.text = mNavn[indexPath.item]
+        cell?.arbejdsområde.text = mArbejdsområde[indexPath.item]
+        return cell!
     }
-    */
-
 }
