@@ -797,7 +797,7 @@
                         <segue destination="4w5-zP-VSC" kind="relationship" relationship="viewControllers" id="udT-Nr-VOH"/>
                         <segue destination="iCH-Nn-jxN" kind="relationship" relationship="viewControllers" id="Xm5-Ph-R9r"/>
                         <segue destination="n9x-6Y-P7H" kind="relationship" relationship="viewControllers" id="G9Y-iX-v3y"/>
-                        <segue destination="vHE-Y1-xCy" kind="relationship" relationship="viewControllers" id="oEc-99-GUq"/>
+                        <segue destination="lNR-2C-79w" kind="relationship" relationship="viewControllers" id="oEc-99-GUq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnk-lT-NHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -813,7 +813,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-wG-xRF">
-                                <rect key="frame" x="0.0" y="146" width="409" height="472"/>
+                                <rect key="frame" x="0.0" y="196" width="409" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oZC-dv-XfJ">
@@ -858,7 +858,7 @@
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flexicu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="QgM-Qc-LhV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="124"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="124"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -869,9 +869,72 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="96R-T1-nCJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Udlej" id="x9T-el-Cwk"/>
+                    <navigationItem key="navigationItem" id="SGe-Bg-tdC"/>
+                    <connections>
+                        <segue destination="O95-qw-Rww" kind="show" id="YNb-h1-fr3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0c-u5-9Ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.8000000000002" y="129.98500749625188"/>
+        </scene>
+        <!--Udlej Medarbejder-->
+        <scene sceneID="55l-ze-56x">
+            <objects>
+                <viewController storyboardIdentifier="UdlejMedarbejder" id="O95-qw-Rww" customClass="UdlejMedarbejder" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rRR-to-FCs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0F-Cm-4TA">
+                                <rect key="frame" x="166" y="160" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arbejdsområde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttl-jY-fMC">
+                                <rect key="frame" x="127" y="263" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J0F-Cm-4TA" firstAttribute="leading" secondItem="U9K-II-Gj8" secondAttribute="leading" constant="166" id="4W8-11-eyY"/>
+                            <constraint firstItem="Ttl-jY-fMC" firstAttribute="leading" secondItem="U9K-II-Gj8" secondAttribute="leading" constant="127" id="AYx-Qt-A7N"/>
+                            <constraint firstItem="U9K-II-Gj8" firstAttribute="trailing" secondItem="Ttl-jY-fMC" secondAttribute="trailing" constant="130" id="CNC-Z1-eaf"/>
+                            <constraint firstItem="J0F-Cm-4TA" firstAttribute="top" secondItem="U9K-II-Gj8" secondAttribute="top" constant="96" id="cFT-D9-7uT"/>
+                            <constraint firstItem="Ttl-jY-fMC" firstAttribute="top" secondItem="J0F-Cm-4TA" secondAttribute="bottom" constant="82" id="lKX-gL-oPt"/>
+                            <constraint firstItem="U9K-II-Gj8" firstAttribute="trailing" secondItem="J0F-Cm-4TA" secondAttribute="trailing" constant="169" id="s4H-1N-CQe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U9K-II-Gj8"/>
+                    </view>
+                    <connections>
+                        <outlet property="navn" destination="J0F-Cm-4TA" id="uH0-S3-2gZ"/>
+                        <outlet property="workfield" destination="Ttl-jY-fMC" id="YXg-vk-9jz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dP4-Og-4LS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3326" y="130"/>
+        </scene>
+        <!--Udlej-->
+        <scene sceneID="lYX-ff-SiV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lNR-2C-79w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Udlej" id="x9T-el-Cwk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eGb-nq-GR4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vHE-Y1-xCy" kind="relationship" relationship="rootViewController" id="RHG-Pz-YI6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zcz-ZI-fdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1885.5999999999999" y="129.98500749625188"/>
         </scene>

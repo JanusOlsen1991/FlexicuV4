@@ -40,4 +40,12 @@ class Udlej: UIViewController, UICollectionViewDelegate, UICollectionViewDataSou
         cell?.arbejdsområde.text = mArbejdsområde[indexPath.item]
         return cell!
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "UdlejMedarbejder") as? UdlejMedarbejder
+        vc?.name = mNavn[indexPath.item]
+        vc?.arbejdsområde = mArbejdsområde[indexPath.item]
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
 }

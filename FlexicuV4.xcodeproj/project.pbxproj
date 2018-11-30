@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C1AC02E21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */; };
+		0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */; };
 		FD50008D21AFE8B100D9886E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50008C21AFE8B100D9886E /* AppDelegate.swift */; };
 		FD50009221AFE8B100D9886E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD50009021AFE8B100D9886E /* Main.storyboard */; };
 		FD50009421AFE8B300D9886E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD50009321AFE8B300D9886E /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Udlej_AlleMedarbejdere.swift; sourceTree = "<group>"; };
+		0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdlejMedarbejder.swift; sourceTree = "<group>"; };
 		FD50008921AFE8B100D9886E /* FlexicuV4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexicuV4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD50008C21AFE8B100D9886E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD50009121AFE8B100D9886E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				FD5000AE21AFF79100D9886E /* HovedMenu.swift */,
 				FD5000AB21AFF79100D9886E /* Indbakke.swift */,
 				FD5000AA21AFF79000D9886E /* Lej.swift */,
+				0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */,
 				FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */,
 				FD5000A921AFF79000D9886E /* Udlej.swift */,
 				FD5000A721AFF70300D9886E /* Login.swift */,
@@ -201,6 +204,7 @@
 				FD5000C121AFF86900D9886E /* Adresse.swift in Sources */,
 				FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */,
 				FD5000BA21AFF84500D9886E /* AlleMedarbejdereCVCell.swift in Sources */,
+				0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */,
 				FD5000AF21AFF79100D9886E /* Udlej.swift in Sources */,
 				FD5000B321AFF79100D9886E /* MineMedarbejdere.swift in Sources */,
 				FD5000C221AFF86900D9886E /* Loen.swift in Sources */,
