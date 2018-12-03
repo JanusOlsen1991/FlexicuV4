@@ -28,13 +28,13 @@ class Udlej: UIViewController, UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return mNavn.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell
         cell?.layer.borderWidth = 1.0
-        cell?.layer.borderColor = UIColor.gray.cgColor
+        cell?.layer.borderColor = UIColor.green.cgColor
         cell?.layer.cornerRadius = 3.0
         cell?.navn.text = mNavn[indexPath.item]
         cell?.arbejdsområde.text = mArbejdsområde[indexPath.item]
