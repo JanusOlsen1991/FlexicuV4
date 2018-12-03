@@ -1137,13 +1137,15 @@
                                 </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flexicu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="QgM-Qc-LhV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="124"/>
+                                <rect key="frame" x="10" y="64" width="365" height="124"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QgM-Qc-LhV" firstAttribute="top" secondItem="96R-T1-nCJ" secondAttribute="top" id="H75-pL-8Cs"/>
+                            <constraint firstItem="QgM-Qc-LhV" firstAttribute="leading" secondItem="96R-T1-nCJ" secondAttribute="leading" constant="10" id="PKH-Bl-t8R"/>
                             <constraint firstItem="QgM-Qc-LhV" firstAttribute="leading" secondItem="96R-T1-nCJ" secondAttribute="leading" id="Y1P-KZ-K70"/>
+                            <constraint firstItem="QgM-Qc-LhV" firstAttribute="trailing" secondItem="96R-T1-nCJ" secondAttribute="trailing" constant="10" id="fe2-d1-pBa"/>
                             <constraint firstItem="QgM-Qc-LhV" firstAttribute="trailing" secondItem="96R-T1-nCJ" secondAttribute="trailing" id="l3J-yy-Sw1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="96R-T1-nCJ"/>
