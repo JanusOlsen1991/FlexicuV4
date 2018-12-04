@@ -11,17 +11,11 @@ import UIKit
 
 class MineMedarbejdere: UIViewController {
 
-    @IBOutlet weak var navnTextField: UITextField!
-    @IBOutlet weak var foedselsaarTextField: UITextField!
-    @IBOutlet weak var stillingTextField: UITextField!
-    @IBOutlet weak var loenTextField: UITextField!
-    @IBOutlet weak var kommentarTextView: UITextView!
+
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        kommentarTextView.layer.cornerRadius = 5
-        kommentarTextView.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
-        kommentarTextView.layer.borderWidth = 0.5
-        kommentarTextView.clipsToBounds = true
+
         
       /*
         let borderColor : UIColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)

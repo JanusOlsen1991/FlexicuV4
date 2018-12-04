@@ -32,6 +32,7 @@
 		FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BD21AFF86900D9886E /* Medarbejder.swift */; };
 		FD5000C121AFF86900D9886E /* Adresse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BE21AFF86900D9886E /* Adresse.swift */; };
 		FD5000C221AFF86900D9886E /* Loen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BF21AFF86900D9886E /* Loen.swift */; };
+		FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		FD5000BD21AFF86900D9886E /* Medarbejder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medarbejder.swift; sourceTree = "<group>"; };
 		FD5000BE21AFF86900D9886E /* Adresse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adresse.swift; sourceTree = "<group>"; };
 		FD5000BF21AFF86900D9886E /* Loen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loen.swift; sourceTree = "<group>"; };
+		FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndgaaedeAftaler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +294,7 @@
 				FD50008D21AFE8B100D9886E /* AppDelegate.swift in Sources */,
 				0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */,
 				FD5000A821AFF70300D9886E /* Login.swift in Sources */,
+				FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */,
 				FD5000B921AFF84500D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift in Sources */,
 				FD5000C121AFF86900D9886E /* Adresse.swift in Sources */,
 				FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */,

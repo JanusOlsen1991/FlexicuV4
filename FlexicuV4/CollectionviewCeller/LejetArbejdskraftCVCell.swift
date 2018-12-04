@@ -11,5 +11,6 @@ import UIKit
 class LejetArbejdskraftCVCell: UICollectionViewCell {
     @IBOutlet weak var navnLabel: UILabel!
     
+    @IBOutlet weak var udlejerLabel: UILabel!
     @IBOutlet weak var lejeperiodeLabel: UILabel!
 }
