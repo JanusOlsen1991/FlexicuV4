@@ -80,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C8EE5B921B6F09700FE2CDD /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		0EECA8A5123FFD06CC16FDD1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +112,7 @@
 				FD50008A21AFE8B100D9886E /* Products */,
 				0EECA8A5123FFD06CC16FDD1 /* Pods */,
 				B9A5E174227ED2BC21C3CB1A /* Frameworks */,
+				0C8EE5B921B6F09700FE2CDD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -457,7 +466,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
-				INFOPLIST_FILE = FlexicuV4/Info.plist;
+				INFOPLIST_FILE = "FlexicuV4-kopi/Info.plist";
+				"INFOPLIST_FILE[sdk=*]" = FlexicuV4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +486,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
-				INFOPLIST_FILE = FlexicuV4/Info.plist;
+				INFOPLIST_FILE = "FlexicuV4-kopi/Info.plist";
+				"INFOPLIST_FILE[sdk=*]" = FlexicuV4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
