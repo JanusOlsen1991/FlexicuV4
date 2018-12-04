@@ -2,7 +2,7 @@
 //  IndgaaedeAftaler.swift
 //  FlexicuV4
 //
-//  Created by Janus Olsen on 03/12/2018.
+//  Created by Gunn Hentze on 04/12/2018.
 //  Copyright © 2018 DTu Diplom. All rights reserved.
 //
 
