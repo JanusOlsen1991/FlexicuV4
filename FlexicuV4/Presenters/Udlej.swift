@@ -38,6 +38,7 @@ class Udlej: UIViewController, UICollectionViewDelegate, UICollectionViewDataSou
         cell?.layer.cornerRadius = 3.0
         cell?.navn.text = mNavn[indexPath.item]
         cell?.arbejdsområde.text = mArbejdsområde[indexPath.item]
+        //ref til medarbejder objekt i klassen
         return cell!
     }
     

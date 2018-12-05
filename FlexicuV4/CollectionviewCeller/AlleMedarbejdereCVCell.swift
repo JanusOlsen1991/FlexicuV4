@@ -10,6 +10,7 @@ import UIKit
 
 class AlleMedarbejdereCVCell: UICollectionViewCell {
     
+    @IBOutlet weak var LastImageView: UIImageView!
     @IBOutlet weak var navnLabel: UILabel!
     @IBOutlet weak var lejetAfLabel: UILabel!
     @IBOutlet weak var udlejetIPeriodeLabel: UILabel!
