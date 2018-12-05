@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class Login: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginBtnPressed: UIButton!
+    var ref: DatabaseReference!
+    var virksomhed: Virksomhed!
+    
     override func viewDidLoad() {
+   //     var ref: DatabaseReference
+     
+       // ref.child("hey").child("1").setValue("Gunn")
         super.viewDidLoad()
-
+        ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
 
@@ -31,14 +40,49 @@ class Login: UIViewController {
         print(UIDevice.current.orientation.isLandscape)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func LoginPressed(_ sender: UIButton) {
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if(error != nil){
+                print(error!)
+            }
+            else{
+                print("Du er logget ind")
+                self.readData()
+                
+                let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                appDelegate.window?.rootViewController = tabBar
+                
+            }
+        }
+        
     }
-    */
-
+    
+    func readData(){
+        
+        let userID = Auth.auth().currentUser?.uid
+        let weee = "wee"
+        print("Current user ID is \(userID ?? weee)")
+        ref.child("user").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            print("antal",snapshot.childrenCount)
+            let value = snapshot.value as? NSDictionary
+            let CVR = value?["CVR"] as? String ?? ""
+            let virkNavn = value?["virkNavn"] as? String ?? ""
+            let virkAdresse = value?["virkAdresse"] as? String ?? ""
+            let postnr = value?["postnr"] as? String ?? ""
+            let brugerNavn = value?["brugerNavn"] as? String ?? ""
+            let brugEmail = value?["brugEmail"] as? String ?? ""
+            let brugerTlf = value?["brugerTlf"] as? String ?? ""
+            
+            self.virksomhed = Virksomhed(CVR: CVR, virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, brugNavn: brugerNavn, brugEmail: brugEmail, brugTlf: brugerTlf)
+            print("CVR:\(CVR)")
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
 }
