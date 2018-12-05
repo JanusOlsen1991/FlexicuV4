@@ -39,7 +39,8 @@ class OpretBrugerLogin: UIViewController {
             }
             else{
                 print("Du har oprettet en bruger")
-                let loginSkærmVC = self.storyboard?.instantiateViewController(withIdentifier: "loginSkærm") as! Login
+                self.infoStruct?.Email=self.LEmailTextField.text
+                let loginSkærmVC = self.storyboard?.instantiateViewController(withIdentifier: "logindSkærm") as! Login
 //                loginSkærmVC.setStructDataReference(structDataReference: infoStruct!)
                 self.navigationController?.pushViewController(loginSkærmVC, animated: true)
             }
