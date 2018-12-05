@@ -20,7 +20,7 @@ class Virksomhed{
     var brugTlf:String
     var medarbejdere: Array<Medarbejder> = Array()
     
-    init(CVR: String , virkNavn:String, virkAdresse: String, postnr:String, /*id: String,*/ brugNavn:String, brugEmail:String, brugTlf:String){
+    init(CVR: String , virkNavn:String, virkAdresse: String, postnr:String, /*id: String,*/ brugNavn:String, brugEmail:String, brugTlf:String){   
         self.CVR = CVR
         self.virkNavn = virkNavn
         self.virkAdresse = virkAdresse
