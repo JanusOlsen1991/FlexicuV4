@@ -22,7 +22,7 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         // Do any additional setup after loading the view.
     }
@@ -46,6 +46,7 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
             cell?.layer.borderWidth = 1.0
             cell?.layer.borderColor = UIColor.gray.cgColor
             cell?.navnLabel.text = "Init All"
+            
         return cell!
         } else if collectionView == CollectionView2{
             let cell: LejetArbejdskraftCVCell? = collectionView.dequeueReusableCell(withReuseIdentifier: lejetACVIdentifier, for: indexPath) as? LejetArbejdskraftCVCell
@@ -59,6 +60,12 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
             cell?.layer.borderColor = UIColor.gray.cgColor
             cell?.navnLabel.text = "Hej hej"
             cell?.lejetAfLabel.text = "Janus rules"
+            if indexPath.row == 9{
+            cell?.LastImageView.isHidden = false
+                cell?.navnLabel.isHidden = true
+                cell?.lejetAfLabel.isHidden = true
+                cell?.udlejetIPeriodeLabel.isHidden = true
+            }
             return cell!
             
         }
@@ -70,8 +77,10 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
         
         //Test om det er lejede medarbejdere
         if collectionView == CollectionView3 {
-            let viewController = storyboard?.instantiateViewController(withIdentifier: "ValgtMedarbejderView")
-            self.navigationController?.pushViewController(viewController!, animated: true)
+            let viewController1 = storyboard?.instantiateViewController(withIdentifier: "ValgtMedarbejderView") as? MineMedarbejdere
+            
+            
+            self.navigationController?.pushViewController(viewController1!, animated: true)
         }
             //Ellers vælg den for egne medarbejdere
             //Gælder begge de andre collections
