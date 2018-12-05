@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
@@ -20,9 +22,11 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     let lejetACVIdentifier = "lejetArbejdskraftCell"
     let alleMCVIdentifier = "alleMedarbejdereCell"
     
+    var ref: DatabaseReference!
+    var virksomhed: Virksomhed!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = Database.database().reference()
         
         // Do any additional setup after loading the view.
     }
@@ -80,15 +84,7 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
 
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
-        
     }
-
-
-
-
-
-
-        
 }
     
     

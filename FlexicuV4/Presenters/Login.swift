@@ -15,11 +15,16 @@ class Login: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtnPressed: UIButton!
+    
+    var ref: DatabaseReference!
+    var virksomhed: Virksomhed!
+    
     override func viewDidLoad() {
    //     var ref: DatabaseReference
      //   ref = Database.database().reference()
        // ref.child("hey").child("1").setValue("Gunn")
         super.viewDidLoad()
+        ref = Database.database().reference()
 
         // Do any additional setup after loading the view.
     }
@@ -45,19 +50,39 @@ class Login: UIViewController {
             }
             else{
                 print("Du er logget ind")
-                
-                
                 let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
                 
+                self.readData()
+                
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                
                 appDelegate.window?.rootViewController = tabBar
-                
-//                let tabBarCV = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") as! TabBarController
-//                self.navigationController?.pushViewController(tabBarCV, animated: true)
             }
         }
         
+    }
+    
+    func readData(){
+        
+        let userID = Auth.auth().currentUser?.uid
+        let weee = "wee"
+        print("Current user ID is \(userID ?? weee)")
+        ref.child("user").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            print("antal",snapshot.childrenCount)
+            let value = snapshot.value as? NSDictionary
+            let CVR = value?["CVR"] as? String ?? ""
+            let virkNavn = value?["virkNavn"] as? String ?? ""
+            let virkAdresse = value?["virkAdresse"] as? String ?? ""
+            let postnr = value?["postnr"] as? String ?? ""
+            let brugerNavn = value?["brugerNavn"] as? String ?? ""
+            let brugEmail = value?["brugEmail"] as? String ?? ""
+            let brugerTlf = value?["brugerTlf"] as? String ?? ""
+
+            self.virksomhed = Virksomhed(CVR: CVR, virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, brugNavn: brugerNavn, brugEmail: brugEmail, brugTlf: brugerTlf)
+            print("CVR:\(CVR)")
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
 }
