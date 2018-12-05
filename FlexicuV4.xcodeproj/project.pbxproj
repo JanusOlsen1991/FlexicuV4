@@ -13,8 +13,6 @@
 		0C8EE5B321B6B30000FE2CDD /* OpretBrugerKontakt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */; };
 		0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */; };
 		0C8EE5B721B6E88B00FE2CDD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */; };
-		0C8EE5C521B7FC4B00FE2CDD /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5C421B7FC4B00FE2CDD /* DAO.swift */; };
-		0C8EE5D421B83B3F00FE2CDD /* Virksomhed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D321B83B3E00FE2CDD /* Virksomhed.swift */; };
 		0C8EE5D121B8391600FE2CDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */; };
 		99B735D35C8313F3F6DFD594 /* Pods_FlexicuV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AEA7BF07DC354B348130D0 /* Pods_FlexicuV4.framework */; };
 		FD50008D21AFE8B100D9886E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50008C21AFE8B100D9886E /* AppDelegate.swift */; };
@@ -31,6 +29,8 @@
 		FD5000BA21AFF84500D9886E /* AlleMedarbejdereCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000B721AFF84400D9886E /* AlleMedarbejdereCVCell.swift */; };
 		FD5000BB21AFF84500D9886E /* LejetArbejdskraftCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000B821AFF84400D9886E /* LejetArbejdskraftCVCell.swift */; };
 		FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BD21AFF86900D9886E /* Medarbejder.swift */; };
+		FD5000C121AFF86900D9886E /* Adresse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BE21AFF86900D9886E /* Adresse.swift */; };
+		FD5000C221AFF86900D9886E /* Loen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BF21AFF86900D9886E /* Loen.swift */; };
 		FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +41,6 @@
 		0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerKontakt.swift; sourceTree = "<group>"; };
 		0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerLogin.swift; sourceTree = "<group>"; };
 		0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		0C8EE5C421B7FC4B00FE2CDD /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
-		0C8EE5D321B83B3E00FE2CDD /* Virksomhed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virksomhed.swift; sourceTree = "<group>"; };
 		0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C323334DE8D4FE5788C0A32 /* Pods-FlexicuV4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexicuV4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4.debug.xcconfig"; sourceTree = "<group>"; };
 		78C2F8E8285841EBA6316FA4 /* Pods-FlexicuV4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexicuV4.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,8 +61,9 @@
 		FD5000B721AFF84400D9886E /* AlleMedarbejdereCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlleMedarbejdereCVCell.swift; sourceTree = "<group>"; };
 		FD5000B821AFF84400D9886E /* LejetArbejdskraftCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LejetArbejdskraftCVCell.swift; sourceTree = "<group>"; };
 		FD5000BD21AFF86900D9886E /* Medarbejder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medarbejder.swift; sourceTree = "<group>"; };
+		FD5000BE21AFF86900D9886E /* Adresse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adresse.swift; sourceTree = "<group>"; };
+		FD5000BF21AFF86900D9886E /* Loen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loen.swift; sourceTree = "<group>"; };
 		FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndgaaedeAftaler.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +78,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C8EE5B921B6F09700FE2CDD /* Recovered References */ = {
+		0C8EE5C621B8372700FE2CDD /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -110,7 +109,7 @@
 				FD50008A21AFE8B100D9886E /* Products */,
 				0EECA8A5123FFD06CC16FDD1 /* Pods */,
 				B9A5E174227ED2BC21C3CB1A /* Frameworks */,
-				0C8EE5B921B6F09700FE2CDD /* Recovered References */,
+				0C8EE5C621B8372700FE2CDD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,7 +128,6 @@
 				FD5000B521AFF81E00D9886E /* CollectionviewCeller */,
 				FD5000A621AFF6EF00D9886E /* Presenters */,
 				FD50008C21AFE8B100D9886E /* AppDelegate.swift */,
-				0C8EE5C421B7FC4B00FE2CDD /* DAO.swift */,
 				FD50009021AFE8B100D9886E /* Main.storyboard */,
 				FD50009321AFE8B300D9886E /* Assets.xcassets */,
 				FD50009521AFE8B300D9886E /* LaunchScreen.storyboard */,
@@ -148,7 +146,6 @@
 				0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */,
 				0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */,
 				0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */,
-				0C8EE5C021B6FC3300FE2CDD /* IndgaaedeAftaler.swift */,
 				FD5000AA21AFF79000D9886E /* Lej.swift */,
 				0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */,
 				FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */,
@@ -173,8 +170,9 @@
 		FD5000BC21AFF85B00D9886E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FD5000BE21AFF86900D9886E /* Adresse.swift */,
+				FD5000BF21AFF86900D9886E /* Loen.swift */,
 				FD5000BD21AFF86900D9886E /* Medarbejder.swift */,
-				0C8EE5D321B83B3E00FE2CDD /* Virksomhed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,18 +298,17 @@
 			files = (
 				FD50008D21AFE8B100D9886E /* AppDelegate.swift in Sources */,
 				0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */,
-				0C8EE5C121B6FC3300FE2CDD /* IndgaaedeAftaler.swift in Sources */,
 				FD5000A821AFF70300D9886E /* Login.swift in Sources */,
-				0C8EE5C521B7FC4B00FE2CDD /* DAO.swift in Sources */,
 				FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */,
 				FD5000B921AFF84500D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift in Sources */,
+				FD5000C121AFF86900D9886E /* Adresse.swift in Sources */,
 				FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */,
 				FD5000BA21AFF84500D9886E /* AlleMedarbejdereCVCell.swift in Sources */,
 				0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */,
 				FD5000AF21AFF79100D9886E /* Udlej.swift in Sources */,
 				FD5000B321AFF79100D9886E /* MineMedarbejdere.swift in Sources */,
-				0C8EE5D421B83B3F00FE2CDD /* Virksomhed.swift in Sources */,
 				0C8EE5B321B6B30000FE2CDD /* OpretBrugerKontakt.swift in Sources */,
+				FD5000C221AFF86900D9886E /* Loen.swift in Sources */,
 				0C8EE5B721B6E88B00FE2CDD /* TabBarController.swift in Sources */,
 				FD5000B421AFF79100D9886E /* HovedMenu.swift in Sources */,
 				0C1AC02E21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift in Sources */,
@@ -466,7 +463,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = FlexicuV4/Info.plist;
-				"INFOPLIST_FILE[sdk=*]" = FlexicuV4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,7 +482,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6TSQJ6DQ5;
 				INFOPLIST_FILE = FlexicuV4/Info.plist;
-				"INFOPLIST_FILE[sdk=*]" = FlexicuV4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
