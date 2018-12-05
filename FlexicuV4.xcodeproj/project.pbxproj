@@ -9,15 +9,13 @@
 /* Begin PBXBuildFile section */
 		0C1AC02E21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */; };
 		0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */; };
-		0C8EE5AB21B59D4200FE2CDD /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8EE5AA21B59D4200FE2CDD /* GoogleService-Info-2.plist */; };
-		0C8EE5AD21B5A03500FE2CDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8EE5AC21B5A03400FE2CDD /* GoogleService-Info.plist */; };
 		0C8EE5B121B6A7C300FE2CDD /* OpretBrugerVirk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */; };
 		0C8EE5B321B6B30000FE2CDD /* OpretBrugerKontakt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */; };
 		0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */; };
 		0C8EE5B721B6E88B00FE2CDD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */; };
-		0C8EE5C121B6FC3300FE2CDD /* IndgaaedeAftaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5C021B6FC3300FE2CDD /* IndgaaedeAftaler.swift */; };
 		0C8EE5C521B7FC4B00FE2CDD /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5C421B7FC4B00FE2CDD /* DAO.swift */; };
 		0C8EE5D421B83B3F00FE2CDD /* Virksomhed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D321B83B3E00FE2CDD /* Virksomhed.swift */; };
+		0C8EE5D121B8391600FE2CDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */; };
 		99B735D35C8313F3F6DFD594 /* Pods_FlexicuV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AEA7BF07DC354B348130D0 /* Pods_FlexicuV4.framework */; };
 		FD50008D21AFE8B100D9886E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50008C21AFE8B100D9886E /* AppDelegate.swift */; };
 		FD50009221AFE8B100D9886E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD50009021AFE8B100D9886E /* Main.storyboard */; };
@@ -33,20 +31,19 @@
 		FD5000BA21AFF84500D9886E /* AlleMedarbejdereCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000B721AFF84400D9886E /* AlleMedarbejdereCVCell.swift */; };
 		FD5000BB21AFF84500D9886E /* LejetArbejdskraftCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000B821AFF84400D9886E /* LejetArbejdskraftCVCell.swift */; };
 		FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BD21AFF86900D9886E /* Medarbejder.swift */; };
+		FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Udlej_AlleMedarbejdere.swift; sourceTree = "<group>"; };
 		0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdlejMedarbejder.swift; sourceTree = "<group>"; };
-		0C8EE5AA21B59D4200FE2CDD /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
-		0C8EE5AC21B5A03400FE2CDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerVirk.swift; sourceTree = "<group>"; };
 		0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerKontakt.swift; sourceTree = "<group>"; };
 		0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerLogin.swift; sourceTree = "<group>"; };
 		0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		0C8EE5C021B6FC3300FE2CDD /* IndgaaedeAftaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndgaaedeAftaler.swift; sourceTree = "<group>"; };
 		0C8EE5C421B7FC4B00FE2CDD /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		0C8EE5D321B83B3E00FE2CDD /* Virksomhed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virksomhed.swift; sourceTree = "<group>"; };
+		0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C323334DE8D4FE5788C0A32 /* Pods-FlexicuV4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexicuV4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4.debug.xcconfig"; sourceTree = "<group>"; };
 		78C2F8E8285841EBA6316FA4 /* Pods-FlexicuV4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexicuV4.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4.release.xcconfig"; sourceTree = "<group>"; };
 		D3AEA7BF07DC354B348130D0 /* Pods_FlexicuV4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexicuV4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +63,8 @@
 		FD5000B721AFF84400D9886E /* AlleMedarbejdereCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlleMedarbejdereCVCell.swift; sourceTree = "<group>"; };
 		FD5000B821AFF84400D9886E /* LejetArbejdskraftCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LejetArbejdskraftCVCell.swift; sourceTree = "<group>"; };
 		FD5000BD21AFF86900D9886E /* Medarbejder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medarbejder.swift; sourceTree = "<group>"; };
+		FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndgaaedeAftaler.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +134,7 @@
 				FD50009321AFE8B300D9886E /* Assets.xcassets */,
 				FD50009521AFE8B300D9886E /* LaunchScreen.storyboard */,
 				FD50009821AFE8B300D9886E /* Info.plist */,
-				0C8EE5AC21B5A03400FE2CDD /* GoogleService-Info.plist */,
+				0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */,
 			);
 			path = FlexicuV4;
 			sourceTree = "<group>";
@@ -155,7 +154,7 @@
 				FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */,
 				FD5000A921AFF79000D9886E /* Udlej.swift */,
 				FD5000A721AFF70300D9886E /* Login.swift */,
-				0C8EE5AA21B59D4200FE2CDD /* GoogleService-Info-2.plist */,
+				FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -241,9 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD50009721AFE8B300D9886E /* LaunchScreen.storyboard in Resources */,
+				0C8EE5D121B8391600FE2CDD /* GoogleService-Info.plist in Resources */,
 				FD50009421AFE8B300D9886E /* Assets.xcassets in Resources */,
-				0C8EE5AD21B5A03500FE2CDD /* GoogleService-Info.plist in Resources */,
-				0C8EE5AB21B59D4200FE2CDD /* GoogleService-Info-2.plist in Resources */,
 				FD50009221AFE8B100D9886E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +303,7 @@
 				0C8EE5C121B6FC3300FE2CDD /* IndgaaedeAftaler.swift in Sources */,
 				FD5000A821AFF70300D9886E /* Login.swift in Sources */,
 				0C8EE5C521B7FC4B00FE2CDD /* DAO.swift in Sources */,
+				FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */,
 				FD5000B921AFF84500D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift in Sources */,
 				FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */,
 				FD5000BA21AFF84500D9886E /* AlleMedarbejdereCVCell.swift in Sources */,
