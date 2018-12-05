@@ -8,10 +8,13 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class OpretBrugerLogin: UIViewController {
 
     var infoStruct: OpretBrugerVirk.OpretBrugerStruct?
+    var ref: DatabaseReference!
+    var virksomhed: Virksomhed?
     
     @IBOutlet weak var LPassword2TextField: UITextField!
     @IBOutlet weak var LPassword1TextField: UITextField!
@@ -23,6 +26,7 @@ class OpretBrugerLogin: UIViewController {
         OpretBtn.isEnabled = false
         LEmailTextField.text = infoStruct?.BrugEmail
         message.isHidden = true
+        ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
 
@@ -34,13 +38,26 @@ class OpretBrugerLogin: UIViewController {
     @IBAction func OpretBtnPressed(_ sender: UIButton) {
         Auth.auth().createUser(withEmail: LEmailTextField.text!, password: LPassword1TextField.text!) { (user, error) in
             if(error != nil){
+                let alertController = UIAlertController(title: "Fejl!", message: error?.localizedDescription, preferredStyle: .alert)
                 
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                self.present(alertController, animated: true, completion: nil)
                 print(error!)
             }
             else{
                 print("Du har oprettet en bruger")
-                let loginSkærmVC = self.storyboard?.instantiateViewController(withIdentifier: "loginSkærm") as! Login
-//                loginSkærmVC.setStructDataReference(structDataReference: infoStruct!)
+//                var virksomhed = Virksomhed(CVR: (self.infoStruct!.VirkCVRnummer), virkNavn: (self.infoStruct?.VirkNavn)!, virkAdresse: (self.infoStruct?.VirkAdresse)!, postnr: (self.infoStruct?.VirkPostnr)!, brugNavn: (self.infoStruct?.BrugNavn)!, brugEmail: (self.infoStruct?.BrugEmail)!, brugTlf: (self.infoStruct?.BrugTlfnr)!)
+                self.infoStruct?.BrugEmail = self.LEmailTextField.text
+                let user = Auth.auth().currentUser?.uid
+                self.infoStruct?.Email = self.LEmailTextField.text
+                
+//                var ref: DatabaseReference
+//                ref = Database.database().reference()
+                self.ref.child("user").child(user!).setValue(["CVR": self.infoStruct?.VirkCVRnummer, "virkNavn": self.infoStruct?.VirkNavn, "virkAdresse":self.infoStruct?.VirkAdresse, "postnr":self.infoStruct?.VirkPostnr, "brugerNavn":self.infoStruct?.BrugNavn, "brugEmail":self.infoStruct?.BrugEmail, "brugerTlf":self.infoStruct?.BrugTlfnr])
+
+                let loginSkærmVC = self.storyboard?.instantiateViewController(withIdentifier: "logindSkærm") as! Login
                 self.navigationController?.pushViewController(loginSkærmVC, animated: true)
             }
         }
@@ -76,5 +93,8 @@ class OpretBrugerLogin: UIViewController {
     func setStructDataReference(structDataReference: OpretBrugerVirk.OpretBrugerStruct){
         self.infoStruct = structDataReference;
     }
+    
+    
+    
 
 }
