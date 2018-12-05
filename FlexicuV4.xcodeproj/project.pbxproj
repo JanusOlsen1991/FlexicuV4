@@ -14,6 +14,7 @@
 		0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */; };
 		0C8EE5B721B6E88B00FE2CDD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */; };
 		0C8EE5D121B8391600FE2CDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */; };
+		0C8EE5D721B84CCF00FE2CDD /* Virksomhed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D621B84CCF00FE2CDD /* Virksomhed.swift */; };
 		99B735D35C8313F3F6DFD594 /* Pods_FlexicuV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AEA7BF07DC354B348130D0 /* Pods_FlexicuV4.framework */; };
 		FD50008D21AFE8B100D9886E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50008C21AFE8B100D9886E /* AppDelegate.swift */; };
 		FD50009221AFE8B100D9886E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD50009021AFE8B100D9886E /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerLogin.swift; sourceTree = "<group>"; };
 		0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C8EE5D621B84CCF00FE2CDD /* Virksomhed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virksomhed.swift; sourceTree = "<group>"; };
 		1C323334DE8D4FE5788C0A32 /* Pods-FlexicuV4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexicuV4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4.debug.xcconfig"; sourceTree = "<group>"; };
 		78C2F8E8285841EBA6316FA4 /* Pods-FlexicuV4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexicuV4.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4.release.xcconfig"; sourceTree = "<group>"; };
 		D3AEA7BF07DC354B348130D0 /* Pods_FlexicuV4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexicuV4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 			children = (
 				FD5000BE21AFF86900D9886E /* Adresse.swift */,
 				FD5000BF21AFF86900D9886E /* Loen.swift */,
+				0C8EE5D621B84CCF00FE2CDD /* Virksomhed.swift */,
 				FD5000BD21AFF86900D9886E /* Medarbejder.swift */,
 			);
 			path = Model;
@@ -300,6 +303,7 @@
 				0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */,
 				FD5000A821AFF70300D9886E /* Login.swift in Sources */,
 				FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */,
+				0C8EE5D721B84CCF00FE2CDD /* Virksomhed.swift in Sources */,
 				FD5000B921AFF84500D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift in Sources */,
 				FD5000C121AFF86900D9886E /* Adresse.swift in Sources */,
 				FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */,
