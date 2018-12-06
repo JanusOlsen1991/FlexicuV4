@@ -11,20 +11,18 @@ import Foundation
 class Medarbejder{
     
     var navn:String
-    var foedselsaar:Int
+    var foedselsaar:String
     var adresse:String
-    var postnr:String
-    var loen:Int
+    var loen:String
     var arbejdsomraade:String
     var id:String
     
-    init(navn: String , id: String , foedselsaarr: Int , adresse: String, postnr:String, loen: Int, arbejdsomraade:String){
+    init(navn: String , id: String , foedselsaarr: String , adresse: String, loen: String, arbejdsomraade:String){
         self.navn = navn
         self.foedselsaar = foedselsaarr
         self.adresse = adresse
         self.loen = loen
         self.id = id
-        self.postnr = postnr
         self.arbejdsomraade = arbejdsomraade
     }
     
