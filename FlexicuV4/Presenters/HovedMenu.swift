@@ -60,6 +60,11 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
             cell?.layer.borderColor = UIColor.gray.cgColor
             cell?.navnLabel.text = "Hej hej"
             cell?.lejetAfLabel.text = "Janus rules"
+            //Bug hvis ikke de bliver specificeret
+            cell?.LastImageView.isHidden=true
+            cell?.navnLabel.isHidden = false
+            cell?.lejetAfLabel.isHidden = false
+            cell?.udlejetIPeriodeLabel.isHidden = false
             if indexPath.row == 9{
             cell?.LastImageView.isHidden = false
                 cell?.navnLabel.isHidden = true
