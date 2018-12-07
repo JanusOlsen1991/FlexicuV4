@@ -22,6 +22,7 @@ class MineMedarbejdere: UIViewController {
     
     @IBOutlet weak var distanceTextField: UITextField!
     
+    @IBOutlet weak var gemBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +37,38 @@ class MineMedarbejdere: UIViewController {
     
     
     @IBAction func gemBtnPressed(_ sender: Any) {
+//        VirkSingleton.shared.dao.gemMedarbejder(
         
+        
+//        let medarbejder = Medarbejder(
         
         
     }
     
+    @IBAction func navnIndtastet(_ sender: Any) {
+        gemBtn.isEnabled = erAltTastetInd()
+    }
+    @IBAction func alderIndtastet(_ sender: Any) {
+        gemBtn.isEnabled = erAltTastetInd()
+    }
+    @IBAction func arbejdsområdeIndtastet(_ sender: Any) {
+        gemBtn.isEnabled = erAltTastetInd()
+    }
+    @IBAction func loenIndtastet(_ sender: Any) {
+        gemBtn.isEnabled = erAltTastetInd()
+    }
+    @IBAction func distanceIndtastet(_ sender: Any) {
+        gemBtn.isEnabled = erAltTastetInd()
+    }
+    @IBAction func startdatoIndtastet(_ sender: Any) {
+        gemBtn.isEnabled = erAltTastetInd()
+    }
+    @IBAction func slutdatoIndtastet(_ sender: Any) {
+        gemBtn.isEnabled = erAltTastetInd()
+    }
     
-    func erAltTastetInd(text: String) -> Bool {
-        if(navnTextField.text == "" || alderTextField.text == "" || arbejdsområdeTextField.text == "" || loenTextField.text == "" || startdatoTextField.text == "" || slutdatoTextField.text == ""){
+    func erAltTastetInd() -> Bool {
+        if(navnTextField.text == "" || alderTextField.text == "" || arbejdsområdeTextField.text == "" || loenTextField.text == ""){
             return false
         }
         else{

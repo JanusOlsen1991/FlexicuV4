@@ -433,6 +433,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                <connections>
+                                                    <action selector="navnIndtastet:" destination="BqK-IR-kTn" eventType="editingChanged" id="GDb-gB-ynn"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -451,6 +454,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="alderIndtastet:" destination="BqK-IR-kTn" eventType="editingChanged" id="bGG-20-q74"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fødselsår" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92b-4f-KDi">
                                                 <rect key="frame" x="10" y="5" width="74.666666666666671" height="20.333333333333332"/>
@@ -480,6 +486,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="arbejdsområdeIndtastet:" destination="BqK-IR-kTn" eventType="editingChanged" id="o1u-YF-hZI"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -503,6 +512,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="loenIndtastet:" destination="BqK-IR-kTn" eventType="editingChanged" id="xHj-a0-gag"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dkk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-yz-MI6">
                                                 <rect key="frame" x="301.66666666666669" y="5" width="29.666666666666686" height="20.333333333333332"/>
@@ -534,6 +546,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="distanceIndtastet:" destination="BqK-IR-kTn" eventType="editingDidBegin" id="njH-lT-D1l"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Km. for arbejde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UY-VT-wD8">
                                                 <rect key="frame" x="111.66666666666666" y="5" width="117.66666666666666" height="20.333333333333332"/>
@@ -608,12 +623,18 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="startdatoIndtastet:" destination="BqK-IR-kTn" eventType="editingChanged" id="USu-f8-5kY"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Slutdato" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XYx-ml-wDq">
                                         <rect key="frame" x="129.66666666666666" y="127.33333333333337" width="75" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="slutdatoIndtastet:" destination="BqK-IR-kTn" eventType="editingChanged" id="tGL-81-6cW"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk8-sI-QTI">
                                         <rect key="frame" x="112" y="132.33333333333337" width="7.6666666666666714" height="20.333333333333343"/>
@@ -681,8 +702,10 @@
                         <outlet property="AlderTextField" destination="t61-Dd-N8I" id="O8U-KM-ML4"/>
                         <outlet property="Arbejdsområde" destination="vC0-4b-1YB" id="j1M-kR-5ql"/>
                         <outlet property="alderTextField" destination="t61-Dd-N8I" id="HFu-VW-eBc"/>
+                        <outlet property="arbejdsområdeIndtastet" destination="vC0-4b-1YB" id="0o4-24-YDg"/>
                         <outlet property="arbejdsområdeTextField" destination="vC0-4b-1YB" id="Xmc-BG-3oe"/>
-                        <outlet property="distanceTextField" destination="BG7-kO-cCF" id="BNF-C7-992"/>
+                        <outlet property="distanceTextField" destination="BG7-kO-cCF" id="qzq-d0-b3u"/>
+                        <outlet property="gemBtn" destination="ydk-QK-bxA" id="NSX-a3-ipV"/>
                         <outlet property="kommentarTextField" destination="x0u-tx-HCi" id="Mh3-wb-jfX"/>
                         <outlet property="loen" destination="CBp-MA-ww5" id="MNB-oe-p0A"/>
                         <outlet property="loenTextField" destination="CBp-MA-ww5" id="FCd-su-158"/>

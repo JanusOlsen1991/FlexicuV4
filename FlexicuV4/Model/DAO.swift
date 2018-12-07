@@ -46,6 +46,14 @@ class DAO{
         
     }
     
+    func gemMedarbejter(navn: String, alder: String, arbejdsområde:String, loen:String, kommentar:String, startdato:String, slutdato:String){
+        let medarb = ref.child("user").child(userID!).child("medarbejdere").childByAutoId()
+        medarb.setValue(["navn": navn, "fødselsår": alder, "loen": loen, "arbejdsområde": arbejdsområde, "kommentar":kommentar])
+        
+        
+    }
+    
+    
     func writeAftaler(){
         let med1 = ref.child("user").child(userID!).child("medarbejdere").childByAutoId()
         med1.setValue(["navn": "Gunn", "fødselsår": "1992", "adresse": "Dalslandsgade 8G", "loen": "32000", "arbejdsområde": "Smed", "kommentar":""])
