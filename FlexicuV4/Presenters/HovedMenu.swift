@@ -17,7 +17,9 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     @IBOutlet weak var CollectionView2: UICollectionView! // Lejede
     
     @IBOutlet weak var CollectionView3: UICollectionView! // Alle ens medarbejdere
+    @IBOutlet weak var subview2: UIView!
     
+    @IBOutlet weak var subview3: UIView!
     let udlejedeMIdentifier = "udlejedeMCell"
     let lejetACVIdentifier = "lejetArbejdskraftCell"
     let alleMCVIdentifier = "alleMedarbejdereCell"
@@ -27,14 +29,28 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+//        self.view.addSubview(subview2)
+//        self.view.addSubview(subview3)
 //        self.readData()
        // self.CollectionView3.reloadData()
-        NotificationCenter.default.addObserver(forName: Notification.Name.readData, object: nil, queue: OperationQueue.main) { (notification) in
+        subview3.addSubview(CollectionView3)
+//        CollectionView3.dataSource = self
+        NotificationCenter.default.addObserver(forName: Notification.Name.readMedarbejder, object: nil, queue: OperationQueue.main) { (notification) in
+            print("Opdatering incoming")
             self.CollectionView3.reloadData()
+            
         }
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        NotificationCenter.default.addObserver(forName: Notification.Name.readMedarbejder, object: nil, queue: OperationQueue.main) { (notification) in
+            print("Opdatering incoming")
+            self.CollectionView3.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,7 +81,7 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
                 return ((VirkSingleton.shared.virksomhed?.medarbejdere.count)! + 1)// returner længden på datasættene
             }
             else {
-                return 1
+                return 8
             }
         }
     }
@@ -114,7 +130,9 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
                     cell?.lejetAfLabel.isHidden = true
                     cell?.udlejetIPeriodeLabel.isHidden = true
                 }
+                
             }
+            cell?.navnLabel.text = "HEEEEY"
             return cell!
         }
     }

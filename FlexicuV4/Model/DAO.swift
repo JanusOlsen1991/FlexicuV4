@@ -97,7 +97,7 @@ class DAO{
                     print("medarbejdere hentet: \(String(describing: VirkSingleton.shared.virksomhed?.medarbejdere.count))")
                 }
             }
-            NotificationCenter.default.post(name: NSNotification.Name("readData"), object: self)
+            NotificationCenter.default.post(name: NSNotification.Name("readMedarbejdere"), object: self)
             print("medarbejdere hentet: \(String(describing: VirkSingleton.shared.virksomhed?.medarbejdere.count))")
         }) { (error) in
             print(error.localizedDescription)

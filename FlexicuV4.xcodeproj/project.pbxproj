@@ -155,15 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				FD5000AE21AFF79100D9886E /* HovedMenu.swift */,
-
-
-				FD5000AB21AFF79100D9886E /* Indbakke.swift */,
 				0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */,
 				0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */,
 				0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */,
 				0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */,
-
-
 				FD5000AA21AFF79000D9886E /* Lej.swift */,
 				0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */,
 				FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */,
@@ -346,15 +341,9 @@
 				FD5000B021AFF79100D9886E /* Lej.swift in Sources */,
 				0C8EE5DD21B9C80600FE2CDD /* Aftaler.swift in Sources */,
 				FD5000BB21AFF84500D9886E /* LejetArbejdskraftCVCell.swift in Sources */,
-
 				FD5EF60021BA9F9C00910194 /* HexFarver.swift in Sources */,
-
-
-				FD5000B121AFF79100D9886E /* Indbakke.swift in Sources */,
 				0C8EE5B121B6A7C300FE2CDD /* OpretBrugerVirk.swift in Sources */,
 				0C8EE5E121B9FDD300FE2CDD /* DAO.swift in Sources */,
-
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
