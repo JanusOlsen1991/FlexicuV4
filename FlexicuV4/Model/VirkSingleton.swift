@@ -17,6 +17,7 @@ class VirkSingleton{
     var virksomhed: Virksomhed?
     var ledigFolk: [Aftaler] = []
     var udlejedeFolk: [Aftaler] = []
+    var indlejedeFolk: [Aftaler] = []
     var dao = DAO()
     
 //    func readVirksomhed(){
