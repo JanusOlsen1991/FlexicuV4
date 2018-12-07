@@ -10,24 +10,21 @@ import Foundation
 
 class Virksomhed{
     
-    var CVR:String
+    var CVR = ""
     var virkNavn:String
     var virkAdresse:String
     var postnr:String
-    //    var id:String
-    var brugNavn:String
-    var brugEmail:String
-    var brugTlf:String
-    var medarbejdere: Array<Medarbejder> = Array()
+    var id:String
+    var brugNavn = ""
+    var brugEmail = ""
+    var brugTlf = ""
+    var medarbejdere: [Medarbejder] = []
     
-    init(CVR: String , virkNavn:String, virkAdresse: String, postnr:String, /*id: String,*/ brugNavn:String, brugEmail:String, brugTlf:String){
-        self.CVR = CVR
+    init(virkNavn:String, virkAdresse: String, postnr:String, id:String){
+        
         self.virkNavn = virkNavn
         self.virkAdresse = virkAdresse
         self.postnr = postnr
-        //        self.id = id
-        self.brugNavn = brugNavn
-        self.brugEmail = brugEmail
-        self.brugTlf = brugTlf
+        self.id = id
     }
 }

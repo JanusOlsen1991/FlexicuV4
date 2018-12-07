@@ -27,6 +27,12 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+//        self.readData()
+       // self.CollectionView3.reloadData()
+        NotificationCenter.default.addObserver(forName: Notification.Name.readData, object: nil, queue: OperationQueue.main) { (notification) in
+            self.CollectionView3.reloadData()
+        }
+        
         
         // Do any additional setup after loading the view.
     }
@@ -37,17 +43,47 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (VirkSingleton.shared.virksomhed?.medarbejdere.count)! // returner længden på datasættene
+        
+        if collectionView == self.CollectionView1 {
+            if(VirkSingleton.shared.udlejedeFolk.count > 0) {
+                return VirkSingleton.shared.udlejedeFolk.count
+            }
+            else {
+                return 0
+            }
+        }
+        else if collectionView == self.CollectionView2 {
+            if(VirkSingleton.shared.ledigFolk.count > 0) {
+                return VirkSingleton.shared.ledigFolk.count
+            }
+            else {
+                return 0
+            }
+        }
+        else{
+            if(VirkSingleton.shared.virksomhed?.medarbejdere.count != nil){
+                return ((VirkSingleton.shared.virksomhed?.medarbejdere.count)! + 1)// returner længden på datasættene
+            }
+            else {
+                return 1
+            }
+        }
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == CollectionView1 {
             let cell: UdlejedeMedarbejdereCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: udlejedeMIdentifier, for: indexPath) as? UdlejedeMedarbejdereCollectionViewCell
             cell?.layer.borderWidth = 1.0
             cell?.layer.borderColor = UIColor.gray.cgColor
-            cell?.navnLabel.text = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].navn
             
-        return cell!
+            if (indexPath.row<VirkSingleton.shared.udlejedeFolk.count) {
+            cell?.navnLabel.text = VirkSingleton.shared.udlejedeFolk[indexPath.item].medarbejder.navn
+            cell?.lejerLabel.text = VirkSingleton.shared.udlejedeFolk[indexPath.item].udlejer?.virkNavn
+            cell?.lejeperiodeLabel.text = "\(VirkSingleton.shared.udlejedeFolk[indexPath.item].startDato) - \(VirkSingleton.shared.udlejedeFolk[indexPath.item].slutDato)"
+            }
+            return cell!
         } else if collectionView == CollectionView2{
             let cell: LejetArbejdskraftCVCell? = collectionView.dequeueReusableCell(withReuseIdentifier: lejetACVIdentifier, for: indexPath) as? LejetArbejdskraftCVCell
             cell?.layer.borderWidth = 1.0
@@ -58,19 +94,26 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
             let cell: AlleMedarbejdereCVCell? = collectionView.dequeueReusableCell(withReuseIdentifier: alleMCVIdentifier, for: indexPath) as? AlleMedarbejdereCVCell
             cell?.layer.borderWidth = 1.0
             cell?.layer.borderColor = UIColor.gray.cgColor
-            cell?.navnLabel.text = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].navn
-            cell?.lejetAfLabel.text = "Janus rules"
-
-            //Bug hvis ikke de bliver specificeret
-            cell?.LastImageView.isHidden=true
-            cell?.navnLabel.isHidden = false
-            cell?.lejetAfLabel.isHidden = false
-            cell?.udlejetIPeriodeLabel.isHidden = false
-            if indexPath.row == 9{
-                cell?.LastImageView.isHidden = false
-                cell?.navnLabel.isHidden = true
-                cell?.lejetAfLabel.isHidden = true
-                cell?.udlejetIPeriodeLabel.isHidden = true
+            
+            if(VirkSingleton.shared.virksomhed?.medarbejdere.count != nil){
+                if indexPath.row<(VirkSingleton.shared.virksomhed?.medarbejdere.count)!{
+                    cell?.navnLabel.text = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].navn
+                    cell?.udlejetIPeriodeLabel.text = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].arbejdsomraade
+                    cell?.lejetAfLabel.text = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].foedselsaar
+                    
+                //Bug hvis ikke de bliver specificeret
+                    cell?.LastImageView.isHidden=true
+                    cell?.navnLabel.isHidden = false
+                    cell?.lejetAfLabel.isHidden = false
+                    cell?.udlejetIPeriodeLabel.isHidden = false
+                    
+                }
+                else{
+                    cell?.LastImageView.isHidden = false
+                    cell?.navnLabel.isHidden = true
+                    cell?.lejetAfLabel.isHidden = true
+                    cell?.udlejetIPeriodeLabel.isHidden = true
+                }
             }
             return cell!
         }
