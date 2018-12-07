@@ -14,9 +14,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-
         <!--Opret bruger 3 af 3-->
-
         <scene sceneID="0Jz-eH-4uY">
             <objects>
                 <viewController storyboardIdentifier="opretLogin" id="149-dg-nFy" customClass="OpretBrugerLogin" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +25,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flexicu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="JjD-xK-fBT">
                                 <rect key="frame" x="10" y="51.333333333333343" width="394" height="147"/>
                             </imageView>
-
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bHW-2V-wXT">
                                 <rect key="frame" x="0.0" y="198.33333333333331" width="414" height="537.66666666666674"/>
                                 <subviews>
@@ -159,7 +156,6 @@
                         <viewLayoutGuide key="safeArea" id="8BB-In-gVj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Opret bruger 3 af 3" id="Oxb-Sr-2Wl"/>
-
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsq-gx-ms6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1473,9 +1469,7 @@
             </objects>
             <point key="canvasLocation" x="2824.6376811594205" y="817.66304347826099"/>
         </scene>
-
         <!--Opret bruger 1 af 3-->
-
         <scene sceneID="oPl-jE-FTi">
             <objects>
                 <viewController id="ShO-K9-WGN" customClass="OpretBrugerVirk" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
@@ -1503,7 +1497,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="flexicu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="MEf-Ab-KZO">
                                 <rect key="frame" x="10" y="59.000000000000014" width="394" height="147.33333333333337"/>
                             </imageView>
-
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K1l-Tf-i1B">
                                 <rect key="frame" x="0.0" y="213.33333333333334" width="414" height="268.66666666666663"/>
                                 <subviews>
@@ -1600,7 +1593,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-
                                 <constraints>
                                     <constraint firstItem="wKp-mU-wg3" firstAttribute="leading" secondItem="9LO-MH-in5" secondAttribute="leading" id="0nj-Sg-cZR"/>
                                     <constraint firstItem="7bE-yZ-Bo5" firstAttribute="height" secondItem="K1l-Tf-i1B" secondAttribute="height" multiplier="1:5" id="2Bx-kg-gO3"/>
@@ -1628,7 +1620,6 @@
                                     <constraint firstItem="ohK-GE-NXf" firstAttribute="height" secondItem="K1l-Tf-i1B" secondAttribute="height" multiplier="1:5" id="t7f-K7-aAD"/>
                                     <constraint firstItem="PjJ-da-vsA" firstAttribute="width" secondItem="K1l-Tf-i1B" secondAttribute="width" id="tUs-SO-TGA"/>
                                 </constraints>
-
                             </stackView>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="TXu-Zx-D56">
                                 <rect key="frame" x="0.0" y="588.66666666666663" width="414" height="147.33333333333337"/>
@@ -1645,7 +1636,6 @@
                                     <constraint firstAttribute="bottom" secondItem="VXa-zx-Yir" secondAttribute="bottom" constant="20" id="hOK-mF-LdL"/>
                                 </constraints>
                             </view>
-
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1669,22 +1659,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xMI-23-ZxT"/>
                     </view>
-
                     <navigationItem key="navigationItem" title="Opret bruger 1 af 3" id="f0P-o8-1jb">
                         <barButtonItem key="backBarButtonItem" title="tilbage" id="Oks-Dc-zPk"/>
                     </navigationItem>
                     <connections>
                         <segue destination="AAH-2U-sTr" kind="show" id="zEL-4z-X2D"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wn-tz-br8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-524.63768115942037" y="-790.76086956521749"/>
         </scene>
-
         <!--Opret bruger 2 af 3-->
-
         <scene sceneID="rQW-wK-qdL">
             <objects>
                 <viewController storyboardIdentifier="opretKontakt" id="AAH-2U-sTr" customClass="OpretBrugerKontakt" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
@@ -1695,7 +1681,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flexicu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0CS-V7-huB">
                                 <rect key="frame" x="10" y="64" width="394" height="124"/>
                             </imageView>
-
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OZ-1X-A5H">
                                 <rect key="frame" x="0.0" y="588.66666666666663" width="414" height="147.33333333333337"/>
                                 <subviews>
@@ -1814,7 +1799,6 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
-
                                 <constraints>
                                     <constraint firstItem="OcS-MO-ehn" firstAttribute="height" secondItem="t0h-cz-r07" secondAttribute="height" id="9v5-G2-oPB"/>
                                     <constraint firstItem="t0h-cz-r07" firstAttribute="height" secondItem="pCy-Li-8oq" secondAttribute="height" id="A78-Vs-Bsq"/>
@@ -1825,7 +1809,6 @@
                                     <constraint firstItem="gej-qb-M2X" firstAttribute="height" secondItem="YeG-sa-MDL" secondAttribute="height" multiplier="1:5" id="uPF-aY-0Uq"/>
                                     <constraint firstItem="ztf-Fi-z8C" firstAttribute="height" secondItem="t0h-cz-r07" secondAttribute="height" id="wGN-ZV-ySr"/>
                                 </constraints>
-
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1854,7 +1837,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="149-dg-nFy" kind="show" id="hVb-Qg-cpX"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1C-4T-EA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1869,7 +1851,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e53-Yl-nff">
                                 <rect key="frame" x="0.0" y="20" width="414" height="736"/>
                                 <subviews>
@@ -1954,7 +1935,6 @@
                                     <constraint firstItem="Bh0-dk-4JQ" firstAttribute="centerX" secondItem="e53-Yl-nff" secondAttribute="centerX" id="tea-I4-XcM"/>
                                 </constraints>
                             </stackView>
-
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

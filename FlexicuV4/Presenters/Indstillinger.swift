@@ -20,7 +20,7 @@ class Indstillinger: UIViewController {
     @IBOutlet weak var brugersNavnTxt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
