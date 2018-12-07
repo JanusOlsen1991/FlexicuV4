@@ -13,7 +13,7 @@ import FirebaseDatabase
 class DAO{
     var ref: DatabaseReference!
     var userID = Auth.auth().currentUser?.uid
-    
+    var ref1: DatabaseReference!
     init(){ }
     
     func readVirksomhed(){
@@ -79,7 +79,7 @@ class DAO{
             let array:NSArray = snapshot.children.allObjects as NSArray
             print(snapshot.childrenCount)
             for obj in array {
-                print("HALUUUU MED ")
+                
                 let snapshot:DataSnapshot = obj as! DataSnapshot
                 let medid = snapshot.key
                 if let childSnapshot = snapshot.value as? [String : AnyObject]{
@@ -105,82 +105,160 @@ class DAO{
     }
     
     
+    
     func readUdlej(){
         
         ref.child("ledig").queryOrdered(byChild: "aktiv").queryEqual(toValue: true).observeSingleEvent(of: .value, with: { (snapshot) in
             //            let aft_array:NSArray = snapshot.children.allObjects as NSArray
             
-            for child in snapshot.children{
+            for child in snapshot.children.allObjects as! [DataSnapshot]{
                 print(snapshot.childrenCount)
-                let childMedarbSnapshot = snapshot.childSnapshot(forPath: "medarbejdere").children
-                let childUdlejSnapshot = snapshot.childSnapshot(forPath: "udlejer").children
                 
-//                let snapshot:DataSnapshot = child as! DataSnapshot
-                let aftaleid = (child as! DataSnapshot).key
                 
-                if let aftvalue = snapshot.value as? NSDictionary{
-                    let loen = aftvalue["loen"] as? String ?? ""
-                    let startperiode = aftvalue["startperiode"] as? String ?? ""
-                    let slutperiode = aftvalue["slutperiode"] as? String ?? ""
-                    let kommentar = aftvalue["kommentar"] as? String ?? ""
-                    
-                    print("loen",loen)
-                    
-                    let childMedarbSnapshot:DataSnapshot = child as! DataSnapshot
-                    let medid = childMedarbSnapshot.key
-                    
-                    
-                    
-                    var mednavn = ""
-                    var alder = ""
-                    var arbejdsområde = ""
-                    
-                    
-                    if let medValue = childMedarbSnapshot.value as? NSDictionary{
-                        mednavn = medValue["navn"] as? String ?? ""
-                        alder = medValue["fødselsår"] as? String ?? ""
-                        arbejdsområde = medValue["arbejdsområde"] as? String ?? ""
+                //                let snapshot:DataSnapshot = child as! DataSnapshot
+                let aftaleid = child.key
+                
+                let aftvalue = child.value as? NSDictionary
+                let loen = aftvalue!["loen"] as? String ?? ""
+                let startperiode = aftvalue!["startperiode"] as? String ?? ""
+                let slutperiode = aftvalue!["slutperiode"] as? String ?? ""
+                let kommentar = aftvalue!["kommentar"] as? String ?? ""
+                print("loen",loen)
+                
+                
+                
+                let childMedarbSnapshot = child.childSnapshot(forPath: "medarbejder")
+                let childUdlejSnapshot = child.childSnapshot(forPath: "lejer")
+                print(childUdlejSnapshot.key)
+                let medid = childMedarbSnapshot.key
+                var mednavn = ""
+                var alder = ""
+                var arbejdsområde = ""
+                
+                print("medid", medid)
+                
+                let medValue = childMedarbSnapshot.value as? NSDictionary
+                mednavn = medValue?["navn"] as? String ?? "1"
+                alder = medValue?["fødselsår"] as? String ?? "1"
+                arbejdsområde = medValue?["arbejdsområde"] as? String ?? "1"
+                
+                print("medNavn", mednavn)
+                
+                //                let udlejSnapshot:DataSnapshot = child as! DataSnapshot
+                let udlejid = childUdlejSnapshot.key
+                //                        getudlejid.key
+                
+                
+                var virkNavn = ""
+                var virkAdresse = ""
+                var postnr = ""
+                
+                
+                if(udlejid != self.userID){
+                    if let udlejValue = childUdlejSnapshot.value as? NSDictionary{
+                        virkNavn = udlejValue["virkNavn"] as? String ?? ""
+                        virkAdresse = udlejValue["virkAdresse"] as? String ?? ""
+                        postnr = udlejValue["postnr"] as? String ?? ""
                     }
-                   // print()
-                    
-                    let childUdlejSnapshot:DataSnapshot = child as! DataSnapshot
-                    let udlejid = childUdlejSnapshot.key
-//                        getudlejid.key
-                    
-                    
-                    var virkNavn = ""
-                    var virkAdresse = ""
-                    var postnr = ""
-                    
-                    
-                    if(udlejid != self.userID){
-                        if let udlejValue = childUdlejSnapshot.value as? NSDictionary{
-                            virkNavn = udlejValue["virkNavn"] as? String ?? ""
-                            virkAdresse = udlejValue["virkAdresse"] as? String ?? ""
-                            postnr = udlejValue["postnr"] as? String ?? ""
-                        }
-                        
-                    }
-                    
-                    if(udlejid == self.userID!){
-                        for med in (VirkSingleton.shared.virksomhed?.medarbejdere)!{
-                            if(med.id == medid){
-                                med.ledig = false
-                            }
-                        }
-                    }
-                    else{
-                        let ledigMedarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaarr: alder, arbejdsomraade: arbejdsområde)
-                        let udlejVirksomhed = Virksomhed(virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, id: udlejid)
-                        let udlejning = Aftaler(id: aftaleid, medarbejder: ledigMedarbejder, loen: loen, startDato: startperiode, slutDato: slutperiode, udlejer: udlejVirksomhed, indlejer: nil, kommentar: kommentar)
-                        print(ledigMedarbejder.navn)
-                        VirkSingleton.shared.ledigFolk.append(udlejning)
-                    }
-                    
                     
                 }
+                
+                if(udlejid == self.userID!){
+                    for med in (VirkSingleton.shared.virksomhed?.medarbejdere)!{
+                        if(med.id == medid){
+                            med.ledig = false
+                        }
+                    }
+                }
+                else{
+                    let ledigMedarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaarr: alder, arbejdsomraade: arbejdsområde)
+                    let udlejVirksomhed = Virksomhed(virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, id: udlejid)
+                    let udlejning = Aftaler(id: aftaleid, medarbejder: ledigMedarbejder, loen: loen, startDato: startperiode, slutDato: slutperiode, udlejer: udlejVirksomhed, indlejer: nil, kommentar: kommentar)
+                    
+                    VirkSingleton.shared.ledigFolk.append(udlejning)
+                    print("medarbejder navn til udlejning",VirkSingleton.shared.ledigFolk[0].medarbejder.navn)
+                }
             }
-            NotificationCenter.default.post(name: NSNotification.Name("readData"), object: self)
+            NotificationCenter.default.post(name: NSNotification.Name("readUdlejede"), object: self)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func readMineAftaler(){
+        
+        ref.child("ledig").queryOrdered(byChild: "aktiv").queryEqual(toValue: true).observeSingleEvent(of: .value, with: { (snapshot) in
+            //            let aft_array:NSArray = snapshot.children.allObjects as NSArray
+            
+            for child in snapshot.children.allObjects as! [DataSnapshot]{
+                print(snapshot.childrenCount)
+                
+                
+                //                let snapshot:DataSnapshot = child as! DataSnapshot
+                let aftaleid = child.key
+                
+                let aftvalue = child.value as? NSDictionary
+                let loen = aftvalue!["loen"] as? String ?? ""
+                let startperiode = aftvalue!["startperiode"] as? String ?? ""
+                let slutperiode = aftvalue!["slutperiode"] as? String ?? ""
+                let kommentar = aftvalue!["kommentar"] as? String ?? ""
+                print("loen",loen)
+                
+                
+                
+                let childMedarbSnapshot = child.childSnapshot(forPath: "medarbejder")
+                let childUdlejSnapshot = child.childSnapshot(forPath: "lejer")
+                print(childUdlejSnapshot.key)
+                let medid = childMedarbSnapshot.key
+                var mednavn = ""
+                var alder = ""
+                var arbejdsområde = ""
+                
+                print("medid", medid)
+                
+                let medValue = childMedarbSnapshot.value as? NSDictionary
+                mednavn = medValue?["navn"] as? String ?? "1"
+                alder = medValue?["fødselsår"] as? String ?? "1"
+                arbejdsområde = medValue?["arbejdsområde"] as? String ?? "1"
+                
+                print("medNavn", mednavn)
+                
+                //                let udlejSnapshot:DataSnapshot = child as! DataSnapshot
+                let udlejid = childUdlejSnapshot.key
+                //                        getudlejid.key
+                
+                
+                var virkNavn = ""
+                var virkAdresse = ""
+                var postnr = ""
+                
+                
+                if(udlejid != self.userID){
+                    if let udlejValue = childUdlejSnapshot.value as? NSDictionary{
+                        virkNavn = udlejValue["virkNavn"] as? String ?? ""
+                        virkAdresse = udlejValue["virkAdresse"] as? String ?? ""
+                        postnr = udlejValue["postnr"] as? String ?? ""
+                    }
+                    
+                }
+                
+                if(udlejid == self.userID!){
+                    for med in (VirkSingleton.shared.virksomhed?.medarbejdere)!{
+                        if(med.id == medid){
+                            med.ledig = false
+                        }
+                    }
+                }
+                else{
+                    let ledigMedarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaarr: alder, arbejdsomraade: arbejdsområde)
+                    let udlejVirksomhed = Virksomhed(virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, id: udlejid)
+                    let udlejning = Aftaler(id: aftaleid, medarbejder: ledigMedarbejder, loen: loen, startDato: startperiode, slutDato: slutperiode, udlejer: udlejVirksomhed, indlejer: nil, kommentar: kommentar)
+                    
+                    VirkSingleton.shared.ledigFolk.append(udlejning)
+                    print("medarbejder navn til udlejning",VirkSingleton.shared.ledigFolk[0].medarbejder.navn)
+                }
+            }
+            NotificationCenter.default.post(name: NSNotification.Name("readUdlejede"), object: self)
         }) { (error) in
             print(error.localizedDescription)
         }
