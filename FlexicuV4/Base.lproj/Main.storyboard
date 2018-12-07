@@ -1005,7 +1005,7 @@
         <!--Indstillinger-->
         <scene sceneID="hbN-rp-9oC">
             <objects>
-                <viewController id="iCH-Nn-jxN" customClass="Indbakke" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Indstillinger" id="iCH-Nn-jxN" customClass="Indstillinger" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3GX-4A-aDT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1171,17 +1171,18 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Log af" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xkd-IR-HbF">
-                                        <rect key="frame" x="342.66666666666669" y="103" width="61.333333333333314" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVh-OA-OPC">
+                                        <rect key="frame" x="361" y="103" width="43" height="30"/>
+                                        <state key="normal" title="Log af"/>
+                                        <connections>
+                                            <action selector="logAfAction:" destination="iCH-Nn-jxN" eventType="touchUpInside" id="cbg-yL-SYg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Xkd-IR-HbF" secondAttribute="bottom" constant="10" id="LZc-sQ-Vk5"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xkd-IR-HbF" secondAttribute="trailing" constant="10" id="V2r-Z6-Scr"/>
+                                    <constraint firstAttribute="trailing" secondItem="rVh-OA-OPC" secondAttribute="trailing" constant="10" id="ALR-Uf-dEB"/>
+                                    <constraint firstAttribute="bottom" secondItem="rVh-OA-OPC" secondAttribute="bottom" constant="10" id="OCh-a4-R8B"/>
                                     <constraint firstAttribute="trailing" secondItem="Jlb-rl-XGG" secondAttribute="trailing" id="W0U-NC-dim"/>
                                     <constraint firstItem="Jlb-rl-XGG" firstAttribute="top" secondItem="dGY-oI-flJ" secondAttribute="top" id="b6C-s1-5gQ"/>
                                     <constraint firstItem="Jlb-rl-XGG" firstAttribute="height" secondItem="dGY-oI-flJ" secondAttribute="height" multiplier="2:3" id="i7O-8s-Yee"/>
@@ -1354,6 +1355,16 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Indstillinger" id="iKE-fB-sX1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="CVRtxt" destination="D4x-KZ-oC1" id="3TF-9f-dnH"/>
+                        <outlet property="brugersNavnTxt" destination="AJh-gI-lgZ" id="hNk-b9-iZp"/>
+                        <outlet property="brugersTitelTxt" destination="sld-vP-ZO8" id="kBj-Xv-8Wt"/>
+                        <outlet property="brugersTlfTxt" destination="RU1-qn-2xo" id="LFL-H7-vw8"/>
+                        <outlet property="eMailTxt" destination="IUm-P4-aV7" id="dsN-tB-ppN"/>
+                        <outlet property="postNrtxt" destination="Uuq-Sx-6Te" id="AEn-m1-n3O"/>
+                        <outlet property="vshAdressetxt" destination="s40-17-tSe" id="1TJ-fN-vCQ"/>
+                        <outlet property="vshNavntxt" destination="MDy-Wo-mVd" id="QH0-zq-s1M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw2-Rc-UdY" sceneMemberID="firstResponder"/>
             </objects>
@@ -1362,7 +1373,7 @@
         <!--Find arbejdskraft-->
         <scene sceneID="hq5-5w-i7I">
             <objects>
-                <viewController id="n9x-6Y-P7H" customClass="Lej" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Find arbejdskraft" id="n9x-6Y-P7H" customClass="Lej" customModule="FlexicuV4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CzT-yg-TX1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1375,62 +1386,51 @@
                                 <rect key="frame" x="0.0" y="124" width="414" height="612"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qFM-V3-YlP">
-                                    <size key="itemSize" width="375" height="141"/>
+                                    <size key="itemSize" width="375" height="182"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4db-li-Ez7">
-                                        <rect key="frame" x="19.666666666666668" y="0.0" width="375" height="141"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SoegtArbejdskraftCell" id="4db-li-Ez7" customClass="SoegtArbejdskraftCVCell" customModule="FlexicuV4" customModuleProvider="target">
+                                        <rect key="frame" x="19.666666666666668" y="0.0" width="375" height="182"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Navn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gip-nW-fUO">
-                                                    <rect key="frame" x="20" y="0.0" width="40" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gip-nW-fUO">
+                                                    <rect key="frame" x="18" y="2" width="40" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arbejdsområde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3p-tO-XRq">
-                                                    <rect key="frame" x="20" y="29" width="118" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arbejdsområde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3p-tO-XRq">
+                                                    <rect key="frame" x="18" y="31" width="118" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ledig" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wct-pl-SwS">
-                                                    <rect key="frame" x="20" y="60" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lejeperiode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wct-pl-SwS">
+                                                    <rect key="frame" x="18" y="60" width="90" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pris for leje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xg-OH-qqG">
-                                                    <rect key="frame" x="20" y="88" width="90" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pris for leje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xg-OH-qqG">
+                                                    <rect key="frame" x="18" y="118" width="90" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ledig i perioden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16N-IF-GZ3">
-                                                    <rect key="frame" x="71" y="60" width="123" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nx-1b-KSy">
+                                                    <rect key="frame" x="18" y="147" width="29" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oje-Lc-4RI">
-                                                    <rect key="frame" x="283" y="60.666666666666664" width="48" height="20.333333333333336"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUM-sB-fLW">
-                                                    <rect key="frame" x="341" y="60" width="14" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ledig i perioden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16N-IF-GZ3">
+                                                    <rect key="frame" x="17.999999999999993" y="89" width="122.33333333333331" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1438,13 +1438,32 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="oje-Lc-4RI" firstAttribute="centerY" secondItem="4db-li-Ez7" secondAttribute="centerY" id="2Jh-mR-e2t"/>
-                                            <constraint firstItem="wUM-sB-fLW" firstAttribute="centerY" secondItem="oje-Lc-4RI" secondAttribute="centerY" id="Jzk-k6-OJn"/>
-                                            <constraint firstItem="wUM-sB-fLW" firstAttribute="leading" secondItem="oje-Lc-4RI" secondAttribute="trailing" constant="10" id="L03-I6-faS"/>
-                                            <constraint firstAttribute="trailing" secondItem="wUM-sB-fLW" secondAttribute="trailing" constant="20" id="aLF-dM-IDM"/>
+                                            <constraint firstItem="Wct-pl-SwS" firstAttribute="leading" secondItem="x3p-tO-XRq" secondAttribute="leading" id="6w6-cO-G3I"/>
+                                            <constraint firstItem="16N-IF-GZ3" firstAttribute="leading" secondItem="Wct-pl-SwS" secondAttribute="leading" id="Bqy-FF-54B"/>
+                                            <constraint firstItem="16N-IF-GZ3" firstAttribute="top" secondItem="Wct-pl-SwS" secondAttribute="bottom" constant="8" id="K8v-HY-gqG"/>
+                                            <constraint firstItem="x3p-tO-XRq" firstAttribute="top" secondItem="gip-nW-fUO" secondAttribute="bottom" constant="8" id="O8V-1k-rBO"/>
+                                            <constraint firstItem="2xg-OH-qqG" firstAttribute="top" secondItem="16N-IF-GZ3" secondAttribute="bottom" constant="8" id="Qhq-WY-BvE"/>
+                                            <constraint firstItem="2xg-OH-qqG" firstAttribute="leading" secondItem="Wct-pl-SwS" secondAttribute="leading" id="QpD-Ih-zoq"/>
+                                            <constraint firstItem="0Nx-1b-KSy" firstAttribute="leading" secondItem="2xg-OH-qqG" secondAttribute="leading" id="RzA-80-OEW"/>
+                                            <constraint firstItem="Wct-pl-SwS" firstAttribute="top" secondItem="x3p-tO-XRq" secondAttribute="bottom" constant="8" id="XAU-Cc-Flb"/>
+                                            <constraint firstItem="x3p-tO-XRq" firstAttribute="leading" secondItem="gip-nW-fUO" secondAttribute="leading" id="bXg-Zc-5yo"/>
+                                            <constraint firstItem="0Nx-1b-KSy" firstAttribute="top" secondItem="2xg-OH-qqG" secondAttribute="bottom" constant="8" id="dCH-6L-iJv"/>
+                                            <constraint firstItem="2xg-OH-qqG" firstAttribute="leading" secondItem="16N-IF-GZ3" secondAttribute="leading" id="nuY-FQ-lyj"/>
+                                            <constraint firstItem="gip-nW-fUO" firstAttribute="top" secondItem="4db-li-Ez7" secondAttribute="top" constant="2" id="tXf-VC-2kb"/>
+                                            <constraint firstItem="x3p-tO-XRq" firstAttribute="leading" secondItem="4db-li-Ez7" secondAttribute="leadingMargin" constant="10" id="zUe-k4-SFO"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="LedigIPeriodeLabel" destination="16N-IF-GZ3" id="VjH-IX-9se"/>
+                                            <outlet property="NavnLabel" destination="gip-nW-fUO" id="Kp8-93-qhz"/>
+                                            <outlet property="PrisLabel" destination="0Nx-1b-KSy" id="xsF-f2-2x8"/>
+                                            <outlet property="arbejdsomraadeLabel" destination="x3p-tO-XRq" id="q8W-1z-eCE"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="n9x-6Y-P7H" id="g3k-xa-B41"/>
+                                    <outlet property="delegate" destination="n9x-6Y-P7H" id="TA5-wg-Dxp"/>
+                                </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flexicu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="igO-az-Yg4">
                                 <rect key="frame" x="86" y="70" width="242" height="46"/>
@@ -1462,6 +1481,7 @@
                             <constraint firstItem="eU9-C3-dcu" firstAttribute="leading" secondItem="5GH-K6-aRe" secondAttribute="leading" id="Frc-qZ-8gm"/>
                             <constraint firstItem="igO-az-Yg4" firstAttribute="top" secondItem="5GH-K6-aRe" secondAttribute="top" constant="6" id="JH9-Um-aQ3"/>
                             <constraint firstItem="eU9-C3-dcu" firstAttribute="top" secondItem="RJa-J9-abu" secondAttribute="bottom" constant="30" id="KcS-0d-7uU"/>
+                            <constraint firstAttribute="bottom" secondItem="eU9-C3-dcu" secondAttribute="bottom" id="RYz-Zy-6gv"/>
                             <constraint firstItem="eU9-C3-dcu" firstAttribute="trailing" secondItem="5GH-K6-aRe" secondAttribute="trailing" id="ShT-cD-kat"/>
                             <constraint firstItem="igO-az-Yg4" firstAttribute="centerX" secondItem="5GH-K6-aRe" secondAttribute="centerX" id="VLV-D4-kfa"/>
                             <constraint firstItem="5GH-K6-aRe" firstAttribute="trailing" secondItem="RJa-J9-abu" secondAttribute="trailing" constant="20" id="h2Q-aL-mlg"/>
