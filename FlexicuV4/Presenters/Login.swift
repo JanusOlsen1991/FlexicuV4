@@ -137,64 +137,64 @@ class Login: UIViewController {
 //    }
     
     
-    func getVirksomhed() -> Virksomhed{
-        return self.virksomhed
-    }
+//    func getVirksomhed() -> Virksomhed{
+//        return self.virksomhed
+//    }
     
-    func writeData(){
-        let userID = Auth.auth().currentUser?.uid
-        
-        
-        var med1 = ref.child("user").child(userID!).child("medarbejdere").childByAutoId()
-        med1.setValue(["navn": "Gunn", "fødselsår": "1992", "adresse": "Dalslandsgade 8G", "loen": "32000", "arbejdsområde": "Smed", "kommentar":""])
-        var med1id = med1.key
-        
-        ref.child("medarbejdere").child(med1id!).setValue(["navn": "Gunn", "fødselsår": "1992", "adresse": "Dalslandsgade 8G", "loen": "32000", "arbejdsområde": "Smed", "kommentar": "", "Virksomhedid":userID])
-        
-        var med2 = ref.child("user").child(userID!).child("medarbejdere").childByAutoId()
-        med2.setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar":""])
-        var med2id = med2.key
-        
-        ref.child("medarbejdere").child(med2id!).setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar": "", "Virksomhedid":userID])
-        
-
-        var aft1 = ref.child("ledig").childByAutoId()
-        aft1.setValue(["loen": "32000", "startperiode": "1/12-18", "slutperiode": "1/1-19", "aktiv": true])
-        var aft1id = aft1.key
-        ref.child("ledig").child(aft1id!).child("medarbejder").setValue(["navn": "Gunn", "fødselsår": "1992", "adresse": "Dalslandsgade 8G", "loen": "32000", "arbejdsområde": "Smed", "kommentar":"", "id":med1id!])
-        ref.child("ledig").child(aft1id!).child("lejer").setValue(["id": userID, "virkNavn": VirkSingleton.shared.virksomhed?.virkNavn, "virkAdresse":VirkSingleton.shared.virksomhed?.virkAdresse, "postnr":VirkSingleton.shared.virksomhed?.postnr])
-        
-        var aft2 = ref.child("ledig").childByAutoId()
-        aft2.setValue(["loen": "32000", "startperiode": "1/12-18", "slutperiode": "1/1-19", "aktiv": true])
-        var aft2id = aft2.key
-        ref.child("ledig").child(aft2id!).child("medarbejder").setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar":"", "id": med2id!])
-        ref.child("ledig").child(aft2id!).child("lejer").setValue(["id": userID, "virkNavn": VirkSingleton.shared.virksomhed?.virkNavn, "virkAdresse":VirkSingleton.shared.virksomhed?.virkAdresse, "postnr":VirkSingleton.shared.virksomhed?.postnr])
-        
-//        ref.child("user").observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            //print("antal",snapshot.childrenCount)
-//            let value = snapshot.value as? NSDictionary
-//            let CVR = value?["CVR"] as? String ?? ""
-//            let virkNavn = value?["virkNavn"] as? String ?? ""
-//            let virkAdresse = value?["virkAdresse"] as? String ?? ""
-//            let postnr = value?["postnr"] as? String ?? ""
-//            let brugerNavn = value?["brugerNavn"] as? String ?? ""
-//            let brugEmail = value?["brugEmail"] as? String ?? ""
-//            let brugerTlf = value?["brugerTlf"] as? String ?? ""
-        
-//            self.virksomhed = Virksomhed(CVR: CVR, virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, brugNavn: brugerNavn, brugEmail: brugEmail, brugTlf: brugerTlf)
-//            print("CVR:\(CVR)")
+//    func writeData(){
+//        let userID = Auth.auth().currentUser?.uid
 //
-//            var navn:String
-//            var foedselsaar:Int
-//            var adresse:String
-//            var postnr:String
-//            var loen:Int
-//            var arbejdsomraade:String
-//            var id:String
-//        }) { (error) in
-//            print(error.localizedDescription)
-//        }
+//
+//        var med1 = ref.child("user").child(userID!).child("medarbejdere").childByAutoId()
+//        med1.setValue(["navn": "Gunn", "fødselsår": "1992", "adresse": "Dalslandsgade 8G", "loen": "32000", "arbejdsområde": "Smed", "kommentar":""])
+//        var med1id = med1.key
+//
+//        ref.child("medarbejdere").child(med1id!).setValue(["navn": "Gunn", "fødselsår": "1992", "adresse": "Dalslandsgade 8G", "loen": "32000", "arbejdsområde": "Smed", "kommentar": "", "Virksomhedid":userID])
+//
+//        var med2 = ref.child("user").child(userID!).child("medarbejdere").childByAutoId()
+//        med2.setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar":""])
+//        var med2id = med2.key
+//
+//        ref.child("medarbejdere").child(med2id!).setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar": "", "Virksomhedid":userID])
+//
+//
+//        var aft1 = ref.child("ledig").childByAutoId()
+//        aft1.setValue(["loen": "32000", "startperiode": "1/12-18", "slutperiode": "1/1-19", "aktiv": true])
+//        var aft1id = aft1.key
+//        ref.child("ledig").child(aft1id!).child("medarbejder").setValue(["navn": "Gunn", "fødselsår": "1992", "adresse": "Dalslandsgade 8G", "loen": "32000", "arbejdsområde": "Smed", "kommentar":"", "id":med1id!])
+//        ref.child("ledig").child(aft1id!).child("lejer").setValue(["id": userID, "virkNavn": VirkSingleton.shared.virksomhed?.virkNavn, "virkAdresse":VirkSingleton.shared.virksomhed?.virkAdresse, "postnr":VirkSingleton.shared.virksomhed?.postnr])
+//
+//        var aft2 = ref.child("ledig").childByAutoId()
+//        aft2.setValue(["loen": "32000", "startperiode": "1/12-18", "slutperiode": "1/1-19", "aktiv": true])
+//        var aft2id = aft2.key
+//        ref.child("ledig").child(aft2id!).child("medarbejder").setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar":"", "id": med2id!])
+//        ref.child("ledig").child(aft2id!).child("lejer").setValue(["id": userID, "virkNavn": VirkSingleton.shared.virksomhed?.virkNavn, "virkAdresse":VirkSingleton.shared.virksomhed?.virkAdresse, "postnr":VirkSingleton.shared.virksomhed?.postnr])
+//
+////        ref.child("user").observeSingleEvent(of: .value, with: { (snapshot) in
+//            // Get user value
+//            //print("antal",snapshot.childrenCount)
+////            let value = snapshot.value as? NSDictionary
+////            let CVR = value?["CVR"] as? String ?? ""
+////            let virkNavn = value?["virkNavn"] as? String ?? ""
+////            let virkAdresse = value?["virkAdresse"] as? String ?? ""
+////            let postnr = value?["postnr"] as? String ?? ""
+////            let brugerNavn = value?["brugerNavn"] as? String ?? ""
+////            let brugEmail = value?["brugEmail"] as? String ?? ""
+////            let brugerTlf = value?["brugerTlf"] as? String ?? ""
+//
+////            self.virksomhed = Virksomhed(CVR: CVR, virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, brugNavn: brugerNavn, brugEmail: brugEmail, brugTlf: brugerTlf)
+////            print("CVR:\(CVR)")
+////
+////            var navn:String
+////            var foedselsaar:Int
+////            var adresse:String
+////            var postnr:String
+////            var loen:Int
+////            var arbejdsomraade:String
+////            var id:String
+////        }) { (error) in
+////            print(error.localizedDescription)
+////        }
     }
     
-}
+

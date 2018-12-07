@@ -9,6 +9,6 @@
 import Foundation
 
 extension Notification.Name{
-    static let readMedarbejder = Notification.Name(rawValue: "readMedarbejder")
-    static let readUdlejede = Notification.Name(rawValue: "readUdlejede")
+    static let readData = Notification.Name(rawValue: "readData")
+    static let readAftaler = Notification.Name(rawValue: "readAftaler")
 }

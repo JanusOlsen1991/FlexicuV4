@@ -11,34 +11,44 @@ import UIKit
 //For at tilføje navigationcontroller: tryk på et view -> editor -> embed in: vælg type
 
 class Lej: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(forName: Notification.Name.readData, object: nil, queue: OperationQueue.main) { (notification) in
+            print("Opdatering incoming")
+            self.collectionView.reloadData()
+        }
+        // Do any additional setup after loading the view.
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10 // Return ledigemedarbejdere.count
+        return VirkSingleton.shared.ledigFolk.count // Return ledigemedarbejdere.count
     }
     //Sætter cellestørrelse
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        let width = (self.view.frame.size.width)
+        let width = (self.view.frame.size.width-20)
         return CGSize(width: width, height: 182.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SoegtArbejdskraftCVCell? = collectionView.dequeueReusableCell(withReuseIdentifier: "SoegtArbejdskraftCell", for: indexPath) as? SoegtArbejdskraftCVCell
         //Initialiser labels
-        cell?.arbejdsomraadeLabel.text = "Smed"
-        cell?.NavnLabel.text = "Jonatan"
-        cell?.LedigIPeriodeLabel.text = "01/12/2018 - 12/05/2019"
-        cell?.PrisLabel.text = "96.000"
+        
+        
+        
+        cell?.arbejdsomraadeLabel.text = VirkSingleton.shared.ledigFolk[indexPath.item].medarbejder.arbejdsomraade
+        cell?.NavnLabel.text = VirkSingleton.shared.ledigFolk[indexPath.item].medarbejder.navn
+        cell?.LedigIPeriodeLabel.text = "\(VirkSingleton.shared.ledigFolk[indexPath.item].startDato) - \(VirkSingleton.shared.ledigFolk[indexPath.item].slutDato)"
+        cell?.PrisLabel.text = VirkSingleton.shared.ledigFolk[indexPath.item].loen
         cell?.layer.borderWidth = 3.0
         cell?.layer.borderColor = HexFarver.hexStringToUIColor(hex: "#427d3c").cgColor
         return cell!
     }
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
