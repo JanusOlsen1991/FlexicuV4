@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		0C1AC02E21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */; };
 		0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */; };
+		0C8EE5B121B6A7C300FE2CDD /* OpretBrugerVirk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */; };
+		0C8EE5B321B6B30000FE2CDD /* OpretBrugerKontakt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */; };
+		0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */; };
+		0C8EE5B721B6E88B00FE2CDD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */; };
+		0C8EE5D121B8391600FE2CDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */; };
+		0C8EE5D721B84CCF00FE2CDD /* Virksomhed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D621B84CCF00FE2CDD /* Virksomhed.swift */; };
+		0C8EE5D921B9233800FE2CDD /* VirkSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5D821B9233800FE2CDD /* VirkSingleton.swift */; };
+		0C8EE5DB21B9C01C00FE2CDD /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5DA21B9C01C00FE2CDD /* NotificationName.swift */; };
+		0C8EE5DD21B9C80600FE2CDD /* Aftaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5DC21B9C80600FE2CDD /* Aftaler.swift */; };
+		0C8EE5E121B9FDD300FE2CDD /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5E021B9FDD300FE2CDD /* DAO.swift */; };
+		99B735D35C8313F3F6DFD594 /* Pods_FlexicuV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AEA7BF07DC354B348130D0 /* Pods_FlexicuV4.framework */; };
 		FD50008D21AFE8B100D9886E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50008C21AFE8B100D9886E /* AppDelegate.swift */; };
 		FD50009221AFE8B100D9886E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD50009021AFE8B100D9886E /* Main.storyboard */; };
 		FD50009421AFE8B300D9886E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD50009321AFE8B300D9886E /* Assets.xcassets */; };
@@ -31,6 +42,19 @@
 /* Begin PBXFileReference section */
 		0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Udlej_AlleMedarbejdere.swift; sourceTree = "<group>"; };
 		0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdlejMedarbejder.swift; sourceTree = "<group>"; };
+		0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerVirk.swift; sourceTree = "<group>"; };
+		0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerKontakt.swift; sourceTree = "<group>"; };
+		0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerLogin.swift; sourceTree = "<group>"; };
+		0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C8EE5D621B84CCF00FE2CDD /* Virksomhed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virksomhed.swift; sourceTree = "<group>"; };
+		0C8EE5D821B9233800FE2CDD /* VirkSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirkSingleton.swift; sourceTree = "<group>"; };
+		0C8EE5DA21B9C01C00FE2CDD /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		0C8EE5DC21B9C80600FE2CDD /* Aftaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aftaler.swift; sourceTree = "<group>"; };
+		0C8EE5E021B9FDD300FE2CDD /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		1C323334DE8D4FE5788C0A32 /* Pods-FlexicuV4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexicuV4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4.debug.xcconfig"; sourceTree = "<group>"; };
+		78C2F8E8285841EBA6316FA4 /* Pods-FlexicuV4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexicuV4.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4.release.xcconfig"; sourceTree = "<group>"; };
+		D3AEA7BF07DC354B348130D0 /* Pods_FlexicuV4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexicuV4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD50008921AFE8B100D9886E /* FlexicuV4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexicuV4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD50008C21AFE8B100D9886E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD50009121AFE8B100D9886E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,17 +81,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B735D35C8313F3F6DFD594 /* Pods_FlexicuV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C8EE5C621B8372700FE2CDD /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		0EECA8A5123FFD06CC16FDD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C323334DE8D4FE5788C0A32 /* Pods-FlexicuV4.debug.xcconfig */,
+				78C2F8E8285841EBA6316FA4 /* Pods-FlexicuV4.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9A5E174227ED2BC21C3CB1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3AEA7BF07DC354B348130D0 /* Pods_FlexicuV4.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD50008021AFE8B100D9886E = {
 			isa = PBXGroup;
 			children = (
 				FD50008B21AFE8B100D9886E /* FlexicuV4 */,
 				FD50008A21AFE8B100D9886E /* Products */,
+				0EECA8A5123FFD06CC16FDD1 /* Pods */,
+				B9A5E174227ED2BC21C3CB1A /* Frameworks */,
+				0C8EE5C621B8372700FE2CDD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +142,7 @@
 				FD50009321AFE8B300D9886E /* Assets.xcassets */,
 				FD50009521AFE8B300D9886E /* LaunchScreen.storyboard */,
 				FD50009821AFE8B300D9886E /* Info.plist */,
+				0C8EE5D021B8391600FE2CDD /* GoogleService-Info.plist */,
 			);
 			path = FlexicuV4;
 			sourceTree = "<group>";
@@ -98,7 +151,13 @@
 			isa = PBXGroup;
 			children = (
 				FD5000AE21AFF79100D9886E /* HovedMenu.swift */,
-				FD5000AB21AFF79100D9886E /* Indstillinger.swift */,
+
+				FD5000AB21AFF79100D9886E /* Indbakke.swift */,
+				0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */,
+				0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */,
+				0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */,
+				0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */,
+
 				FD5000AA21AFF79000D9886E /* Lej.swift */,
 				0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */,
 				FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */,
@@ -124,7 +183,12 @@
 			isa = PBXGroup;
 			children = (
 				FD5000BE21AFF86900D9886E /* Adresse.swift */,
+				0C8EE5E021B9FDD300FE2CDD /* DAO.swift */,
+				0C8EE5D821B9233800FE2CDD /* VirkSingleton.swift */,
+				0C8EE5DA21B9C01C00FE2CDD /* NotificationName.swift */,
+				0C8EE5DC21B9C80600FE2CDD /* Aftaler.swift */,
 				FD5000BF21AFF86900D9886E /* Loen.swift */,
+				0C8EE5D621B84CCF00FE2CDD /* Virksomhed.swift */,
 				FD5000BD21AFF86900D9886E /* Medarbejder.swift */,
 			);
 			path = Model;
@@ -137,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD50009B21AFE8B300D9886E /* Build configuration list for PBXNativeTarget "FlexicuV4" */;
 			buildPhases = (
+				26D8783C2EFC52396538B9A8 /* [CP] Check Pods Manifest.lock */,
 				FD50008521AFE8B100D9886E /* Sources */,
 				FD50008621AFE8B100D9886E /* Frameworks */,
 				FD50008721AFE8B100D9886E /* Resources */,
+				3C3E504191782B22C4CBD4E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD50009721AFE8B300D9886E /* LaunchScreen.storyboard in Resources */,
+				0C8EE5D121B8391600FE2CDD /* GoogleService-Info.plist in Resources */,
 				FD50009421AFE8B300D9886E /* Assets.xcassets in Resources */,
 				FD50009221AFE8B100D9886E /* Main.storyboard in Resources */,
 			);
@@ -196,27 +263,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26D8783C2EFC52396538B9A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlexicuV4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C3E504191782B22C4CBD4E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlexicuV4/Pods-FlexicuV4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD50008521AFE8B100D9886E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FD50008D21AFE8B100D9886E /* AppDelegate.swift in Sources */,
+				0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */,
 				FD5000A821AFF70300D9886E /* Login.swift in Sources */,
 				FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */,
+				0C8EE5D721B84CCF00FE2CDD /* Virksomhed.swift in Sources */,
 				FD5000B921AFF84500D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift in Sources */,
 				FD5000C121AFF86900D9886E /* Adresse.swift in Sources */,
 				FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */,
 				FD5000BA21AFF84500D9886E /* AlleMedarbejdereCVCell.swift in Sources */,
 				0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */,
+				0C8EE5DB21B9C01C00FE2CDD /* NotificationName.swift in Sources */,
 				FD5000AF21AFF79100D9886E /* Udlej.swift in Sources */,
 				FD5000B321AFF79100D9886E /* MineMedarbejdere.swift in Sources */,
+				0C8EE5B321B6B30000FE2CDD /* OpretBrugerKontakt.swift in Sources */,
 				FD5000C221AFF86900D9886E /* Loen.swift in Sources */,
+				0C8EE5B721B6E88B00FE2CDD /* TabBarController.swift in Sources */,
 				FD5000B421AFF79100D9886E /* HovedMenu.swift in Sources */,
 				0C1AC02E21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift in Sources */,
+				0C8EE5D921B9233800FE2CDD /* VirkSingleton.swift in Sources */,
 				FD5000B021AFF79100D9886E /* Lej.swift in Sources */,
+				0C8EE5DD21B9C80600FE2CDD /* Aftaler.swift in Sources */,
 				FD5000BB21AFF84500D9886E /* LejetArbejdskraftCVCell.swift in Sources */,
-				FD5000B121AFF79100D9886E /* Indstillinger.swift in Sources */,
+
+				FD5000B121AFF79100D9886E /* Indbakke.swift in Sources */,
+				0C8EE5B121B6A7C300FE2CDD /* OpretBrugerVirk.swift in Sources */,
+				0C8EE5E121B9FDD300FE2CDD /* DAO.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +481,7 @@
 		};
 		FD50009C21AFE8B300D9886E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C323334DE8D4FE5788C0A32 /* Pods-FlexicuV4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +500,7 @@
 		};
 		FD50009D21AFE8B300D9886E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C2F8E8285841EBA6316FA4 /* Pods-FlexicuV4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
