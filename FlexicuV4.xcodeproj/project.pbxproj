@@ -27,7 +27,6 @@
 		FD5000A821AFF70300D9886E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000A721AFF70300D9886E /* Login.swift */; };
 		FD5000AF21AFF79100D9886E /* Udlej.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000A921AFF79000D9886E /* Udlej.swift */; };
 		FD5000B021AFF79100D9886E /* Lej.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AA21AFF79000D9886E /* Lej.swift */; };
-		FD5000B121AFF79100D9886E /* Indstillinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AB21AFF79100D9886E /* Indstillinger.swift */; };
 		FD5000B321AFF79100D9886E /* MineMedarbejdere.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */; };
 		FD5000B421AFF79100D9886E /* HovedMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AE21AFF79100D9886E /* HovedMenu.swift */; };
 		FD5000B921AFF84500D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000B621AFF84400D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift */; };
@@ -36,6 +35,9 @@
 		FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BD21AFF86900D9886E /* Medarbejder.swift */; };
 		FD5000C121AFF86900D9886E /* Adresse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BE21AFF86900D9886E /* Adresse.swift */; };
 		FD5000C221AFF86900D9886E /* Loen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000BF21AFF86900D9886E /* Loen.swift */; };
+		FD5EF5FA21BA8C4B00910194 /* Indstillinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5EF5F921BA8C4B00910194 /* Indstillinger.swift */; };
+		FD5EF5FE21BA8F9700910194 /* SoegtArbejdskraftCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5EF5FD21BA8F9700910194 /* SoegtArbejdskraftCVCell.swift */; };
+		FD5EF60021BA9F9C00910194 /* HexFarver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5EF5FF21BA9F9C00910194 /* HexFarver.swift */; };
 		FDBC0E3621B565F90057075D /* IndgaaedeAftaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +66,6 @@
 		FD5000A721AFF70300D9886E /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		FD5000A921AFF79000D9886E /* Udlej.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Udlej.swift; sourceTree = "<group>"; };
 		FD5000AA21AFF79000D9886E /* Lej.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lej.swift; sourceTree = "<group>"; };
-		FD5000AB21AFF79100D9886E /* Indstillinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indstillinger.swift; sourceTree = "<group>"; };
 		FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineMedarbejdere.swift; sourceTree = "<group>"; };
 		FD5000AE21AFF79100D9886E /* HovedMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HovedMenu.swift; sourceTree = "<group>"; };
 		FD5000B621AFF84400D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdlejedeMedarbejdereCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -73,6 +74,9 @@
 		FD5000BD21AFF86900D9886E /* Medarbejder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medarbejder.swift; sourceTree = "<group>"; };
 		FD5000BE21AFF86900D9886E /* Adresse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adresse.swift; sourceTree = "<group>"; };
 		FD5000BF21AFF86900D9886E /* Loen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loen.swift; sourceTree = "<group>"; };
+		FD5EF5F921BA8C4B00910194 /* Indstillinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indstillinger.swift; sourceTree = "<group>"; };
+		FD5EF5FD21BA8F9700910194 /* SoegtArbejdskraftCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoegtArbejdskraftCVCell.swift; sourceTree = "<group>"; };
+		FD5EF5FF21BA9F9C00910194 /* HexFarver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexFarver.swift; sourceTree = "<group>"; };
 		FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndgaaedeAftaler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,11 +156,13 @@
 			children = (
 				FD5000AE21AFF79100D9886E /* HovedMenu.swift */,
 
+
 				FD5000AB21AFF79100D9886E /* Indbakke.swift */,
 				0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */,
 				0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */,
 				0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */,
 				0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */,
+
 
 				FD5000AA21AFF79000D9886E /* Lej.swift */,
 				0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */,
@@ -164,6 +170,7 @@
 				FD5000A921AFF79000D9886E /* Udlej.swift */,
 				FD5000A721AFF70300D9886E /* Login.swift */,
 				FDBC0E3521B565F90057075D /* IndgaaedeAftaler.swift */,
+				FD5EF5F921BA8C4B00910194 /* Indstillinger.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 				0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */,
 				FD5000B821AFF84400D9886E /* LejetArbejdskraftCVCell.swift */,
 				FD5000B621AFF84400D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift */,
+				FD5EF5FD21BA8F9700910194 /* SoegtArbejdskraftCVCell.swift */,
 			);
 			path = CollectionviewCeller;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 				FD5000BF21AFF86900D9886E /* Loen.swift */,
 				0C8EE5D621B84CCF00FE2CDD /* Virksomhed.swift */,
 				FD5000BD21AFF86900D9886E /* Medarbejder.swift */,
+				FD5EF5FF21BA9F9C00910194 /* HexFarver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +330,7 @@
 				FD5000B921AFF84500D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift in Sources */,
 				FD5000C121AFF86900D9886E /* Adresse.swift in Sources */,
 				FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */,
+				FD5EF5FA21BA8C4B00910194 /* Indstillinger.swift in Sources */,
 				FD5000BA21AFF84500D9886E /* AlleMedarbejdereCVCell.swift in Sources */,
 				0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */,
 				0C8EE5DB21B9C01C00FE2CDD /* NotificationName.swift in Sources */,
@@ -330,15 +340,20 @@
 				FD5000C221AFF86900D9886E /* Loen.swift in Sources */,
 				0C8EE5B721B6E88B00FE2CDD /* TabBarController.swift in Sources */,
 				FD5000B421AFF79100D9886E /* HovedMenu.swift in Sources */,
+				FD5EF5FE21BA8F9700910194 /* SoegtArbejdskraftCVCell.swift in Sources */,
 				0C1AC02E21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift in Sources */,
 				0C8EE5D921B9233800FE2CDD /* VirkSingleton.swift in Sources */,
 				FD5000B021AFF79100D9886E /* Lej.swift in Sources */,
 				0C8EE5DD21B9C80600FE2CDD /* Aftaler.swift in Sources */,
 				FD5000BB21AFF84500D9886E /* LejetArbejdskraftCVCell.swift in Sources */,
 
+				FD5EF60021BA9F9C00910194 /* HexFarver.swift in Sources */,
+
+
 				FD5000B121AFF79100D9886E /* Indbakke.swift in Sources */,
 				0C8EE5B121B6A7C300FE2CDD /* OpretBrugerVirk.swift in Sources */,
 				0C8EE5E121B9FDD300FE2CDD /* DAO.swift in Sources */,
+
 
 			);
 			runOnlyForDeploymentPostprocessing = 0;
