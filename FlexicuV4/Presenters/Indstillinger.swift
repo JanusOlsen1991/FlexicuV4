@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Indbakke: UIViewController {
+class Indstillinger: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

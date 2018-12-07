@@ -42,11 +42,11 @@ class Udlej: UIViewController, UICollectionViewDelegate, UICollectionViewDataSou
         return cell!
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "UdlejMedarbejder") as? UdlejMedarbejder
-        vc?.name = mNavn[indexPath.item]
-        vc?.arbejdsområde = mArbejdsområde[indexPath.item]
+   // func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //let vc = storyboard?.instantiateViewController(withIdentifier: "UdlejMedarbejder") as? UdlejMedarbejder
+        //vc?.name = mNavn[indexPath.item]
+        //vc?.arbejdsområde = mArbejdsområde[indexPath.item]
         
-        self.navigationController?.pushViewController(vc!, animated: true)
-    }
+        //self.navigationController?.pushViewController(vc!, animated: true)
+    //}
 }

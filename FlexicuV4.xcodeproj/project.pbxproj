@@ -24,7 +24,7 @@
 		FD5000A821AFF70300D9886E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000A721AFF70300D9886E /* Login.swift */; };
 		FD5000AF21AFF79100D9886E /* Udlej.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000A921AFF79000D9886E /* Udlej.swift */; };
 		FD5000B021AFF79100D9886E /* Lej.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AA21AFF79000D9886E /* Lej.swift */; };
-		FD5000B121AFF79100D9886E /* Indbakke.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AB21AFF79100D9886E /* Indbakke.swift */; };
+		FD5000B121AFF79100D9886E /* Indstillinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AB21AFF79100D9886E /* Indstillinger.swift */; };
 		FD5000B321AFF79100D9886E /* MineMedarbejdere.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */; };
 		FD5000B421AFF79100D9886E /* HovedMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000AE21AFF79100D9886E /* HovedMenu.swift */; };
 		FD5000B921AFF84500D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5000B621AFF84400D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift */; };
@@ -58,7 +58,7 @@
 		FD5000A721AFF70300D9886E /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		FD5000A921AFF79000D9886E /* Udlej.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Udlej.swift; sourceTree = "<group>"; };
 		FD5000AA21AFF79000D9886E /* Lej.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lej.swift; sourceTree = "<group>"; };
-		FD5000AB21AFF79100D9886E /* Indbakke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indbakke.swift; sourceTree = "<group>"; };
+		FD5000AB21AFF79100D9886E /* Indstillinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indstillinger.swift; sourceTree = "<group>"; };
 		FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineMedarbejdere.swift; sourceTree = "<group>"; };
 		FD5000AE21AFF79100D9886E /* HovedMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HovedMenu.swift; sourceTree = "<group>"; };
 		FD5000B621AFF84400D9886E /* UdlejedeMedarbejdereCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdlejedeMedarbejdereCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -145,11 +145,14 @@
 			isa = PBXGroup;
 			children = (
 				FD5000AE21AFF79100D9886E /* HovedMenu.swift */,
-				FD5000AB21AFF79100D9886E /* Indbakke.swift */,
+
+				FD5000AB21AFF79100D9886E /* Indstillinger.swift */,
+
 				0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */,
 				0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */,
 				0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */,
 				0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */,
+
 				FD5000AA21AFF79000D9886E /* Lej.swift */,
 				0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */,
 				FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */,
@@ -322,8 +325,11 @@
 				0C8EE5D921B9233800FE2CDD /* VirkSingleton.swift in Sources */,
 				FD5000B021AFF79100D9886E /* Lej.swift in Sources */,
 				FD5000BB21AFF84500D9886E /* LejetArbejdskraftCVCell.swift in Sources */,
-				FD5000B121AFF79100D9886E /* Indbakke.swift in Sources */,
+
+				FD5000B121AFF79100D9886E /* Indstillinger.swift in Sources */,
+
 				0C8EE5B121B6A7C300FE2CDD /* OpretBrugerVirk.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
