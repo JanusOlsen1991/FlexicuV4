@@ -10,18 +10,20 @@ import Foundation
 
 class Medarbejder{
     
-    var navn = ""
-    var foedselsaar = 0
-    var adresse: Adresse?
-    var loen: Loen?
-    var id = ""
+    var navn:String
+    var foedselsaar:String
+    var adresse:String
+    var loen:String
+    var arbejdsomraade:String
+    var id:String
     
-    
-    init(navn: String , id: String , foedselsaarr: Int , adresse: Adresse? , loen: Loen?){
+    init(navn: String , id: String , foedselsaarr: String , adresse: String, loen: String, arbejdsomraade:String){
         self.navn = navn
         self.foedselsaar = foedselsaarr
         self.adresse = adresse
         self.loen = loen
+        self.id = id
+        self.arbejdsomraade = arbejdsomraade
     }
     
 }

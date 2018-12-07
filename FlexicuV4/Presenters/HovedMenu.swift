@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
@@ -20,24 +22,22 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     let lejetACVIdentifier = "lejetArbejdskraftCell"
     let alleMCVIdentifier = "alleMedarbejdereCell"
     
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ref = Database.database().reference()
         
         // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-
-        
         // Dispose of any resources that can be recreated.
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10 // returner længden på datasættene
+        return (VirkSingleton.shared.virksomhed?.medarbejdere.count)! // returner længden på datasættene
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,7 +45,7 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
             let cell: UdlejedeMedarbejdereCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: udlejedeMIdentifier, for: indexPath) as? UdlejedeMedarbejdereCollectionViewCell
             cell?.layer.borderWidth = 1.0
             cell?.layer.borderColor = UIColor.gray.cgColor
-            cell?.navnLabel.text = "Init All"
+            cell?.navnLabel.text = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].navn
             
         return cell!
         } else if collectionView == CollectionView2{
@@ -58,25 +58,24 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
             let cell: AlleMedarbejdereCVCell? = collectionView.dequeueReusableCell(withReuseIdentifier: alleMCVIdentifier, for: indexPath) as? AlleMedarbejdereCVCell
             cell?.layer.borderWidth = 1.0
             cell?.layer.borderColor = UIColor.gray.cgColor
-            cell?.navnLabel.text = "Hej hej"
+            cell?.navnLabel.text = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].navn
             cell?.lejetAfLabel.text = "Janus rules"
+
             //Bug hvis ikke de bliver specificeret
             cell?.LastImageView.isHidden=true
             cell?.navnLabel.isHidden = false
             cell?.lejetAfLabel.isHidden = false
             cell?.udlejetIPeriodeLabel.isHidden = false
             if indexPath.row == 9{
-            cell?.LastImageView.isHidden = false
+                cell?.LastImageView.isHidden = false
                 cell?.navnLabel.isHidden = true
                 cell?.lejetAfLabel.isHidden = true
                 cell?.udlejetIPeriodeLabel.isHidden = true
             }
             return cell!
-            
         }
-        
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //TODO mangler at teste for om cellen er den sidste i rækken for så skal man kunne oprette
         
@@ -93,16 +92,8 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
         let viewController = storyboard?.instantiateViewController(withIdentifier: "IndgaaedeAftalerView") as? IndgaaedeAftaler
 
         self.navigationController?.pushViewController(viewController!, animated: true)
+        }
     }
-        
-    }
-
-
-
-
-
-
-        
 }
     
     
