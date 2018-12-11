@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C1AC02E21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */; };
-		0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */; };
+		0C1AC03021B1CBC70032E09E /* LejUdlejMedarbejder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AC02F21B1CBC70032E09E /* LejUdlejMedarbejder.swift */; };
 		0C8EE5B121B6A7C300FE2CDD /* OpretBrugerVirk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */; };
 		0C8EE5B321B6B30000FE2CDD /* OpretBrugerKontakt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */; };
 		0C8EE5B521B6BBE800FE2CDD /* OpretBrugerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */; };
@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		0C1AC02D21B1BEBA0032E09E /* Udlej_AlleMedarbejdere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Udlej_AlleMedarbejdere.swift; sourceTree = "<group>"; };
-		0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdlejMedarbejder.swift; sourceTree = "<group>"; };
+		0C1AC02F21B1CBC70032E09E /* LejUdlejMedarbejder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LejUdlejMedarbejder.swift; sourceTree = "<group>"; };
 		0C8EE5B021B6A7C200FE2CDD /* OpretBrugerVirk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerVirk.swift; sourceTree = "<group>"; };
 		0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerKontakt.swift; sourceTree = "<group>"; };
 		0C8EE5B421B6BBE800FE2CDD /* OpretBrugerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpretBrugerLogin.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 				0C8EE5B221B6B30000FE2CDD /* OpretBrugerKontakt.swift */,
 				0C8EE5B621B6E88B00FE2CDD /* TabBarController.swift */,
 				FD5000AA21AFF79000D9886E /* Lej.swift */,
-				0C1AC02F21B1CBC70032E09E /* UdlejMedarbejder.swift */,
+				0C1AC02F21B1CBC70032E09E /* LejUdlejMedarbejder.swift */,
 				FD5000AD21AFF79100D9886E /* MineMedarbejdere.swift */,
 				FD5000A921AFF79000D9886E /* Udlej.swift */,
 				FD5000A721AFF70300D9886E /* Login.swift */,
@@ -327,7 +327,7 @@
 				FD5000C021AFF86900D9886E /* Medarbejder.swift in Sources */,
 				FD5EF5FA21BA8C4B00910194 /* Indstillinger.swift in Sources */,
 				FD5000BA21AFF84500D9886E /* AlleMedarbejdereCVCell.swift in Sources */,
-				0C1AC03021B1CBC70032E09E /* UdlejMedarbejder.swift in Sources */,
+				0C1AC03021B1CBC70032E09E /* LejUdlejMedarbejder.swift in Sources */,
 				0C8EE5DB21B9C01C00FE2CDD /* NotificationName.swift in Sources */,
 				FD5000AF21AFF79100D9886E /* Udlej.swift in Sources */,
 				FD5000B321AFF79100D9886E /* MineMedarbejdere.swift in Sources */,

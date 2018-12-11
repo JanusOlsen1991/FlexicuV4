@@ -14,7 +14,6 @@ class Aftaler {
     var medarbejder:Medarbejder
     var loen:String
     var startDato:String
-    //    var id:String
     var slutDato:String
     var udlejer:Virksomhed?
     var indlejer:Virksomhed?

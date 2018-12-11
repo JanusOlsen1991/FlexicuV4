@@ -22,6 +22,11 @@ class Lej: UIViewController, UICollectionViewDataSource, UICollectionViewDelegat
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.collectionView.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return VirkSingleton.shared.ledigFolk.count // Return ledigemedarbejdere.count
     }
@@ -37,13 +42,13 @@ class Lej: UIViewController, UICollectionViewDataSource, UICollectionViewDelegat
         //Initialiser labels
         
         
-        
         cell?.arbejdsomraadeLabel.text = VirkSingleton.shared.ledigFolk[indexPath.item].medarbejder.arbejdsomraade
         cell?.NavnLabel.text = VirkSingleton.shared.ledigFolk[indexPath.item].medarbejder.navn
         cell?.LedigIPeriodeLabel.text = "\(VirkSingleton.shared.ledigFolk[indexPath.item].startDato) - \(VirkSingleton.shared.ledigFolk[indexPath.item].slutDato)"
         cell?.PrisLabel.text = VirkSingleton.shared.ledigFolk[indexPath.item].loen
         cell?.layer.borderWidth = 3.0
         cell?.layer.borderColor = HexFarver.hexStringToUIColor(hex: "#427d3c").cgColor
+        cell?.layer.cornerRadius = 3.0
         return cell!
     }
     
@@ -56,15 +61,11 @@ class Lej: UIViewController, UICollectionViewDataSource, UICollectionViewDelegat
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let lejUdlejCV = storyboard?.instantiateViewController(withIdentifier: "lejUdlejMedarbejder") as? LejUdlejMedarbejder
+        lejUdlejCV?.lejerOrUdlejer = "lejer"
+        lejUdlejCV?.aftale = Aftaler(id: VirkSingleton.shared.ledigFolk[indexPath.item].id, medarbejder: VirkSingleton.shared.ledigFolk[indexPath.item].medarbejder, loen: VirkSingleton.shared.ledigFolk[indexPath.item].loen, startDato: VirkSingleton.shared.ledigFolk[indexPath.item].startDato, slutDato: VirkSingleton.shared.ledigFolk[indexPath.item].slutDato, udlejer: VirkSingleton.shared.ledigFolk[indexPath.item].udlejer, indlejer: VirkSingleton.shared.ledigFolk[indexPath.item].indlejer, kommentar: VirkSingleton.shared.ledigFolk[indexPath.item].kommentar)
+        self.navigationController?.pushViewController(lejUdlejCV!, animated: true)
     }
-    */
-    //Metode lånt fra stackoverflow til at returnere hexcolors
 
 }

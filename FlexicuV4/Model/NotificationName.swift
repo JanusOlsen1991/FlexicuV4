@@ -11,4 +11,5 @@ import Foundation
 extension Notification.Name{
     static let readData = Notification.Name(rawValue: "readData")
     static let readAftaler = Notification.Name(rawValue: "readAftaler")
+    static let readMed = Notification.Name(rawValue: "medarbejder")
 }

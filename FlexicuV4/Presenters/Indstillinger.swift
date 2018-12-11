@@ -33,14 +33,6 @@ class Indstillinger: UIViewController {
     //TODO -> gåtilbage til login skærm, samt data der bruges i programmet tømmes?
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }

@@ -23,7 +23,6 @@ class OpretBrugerKontakt: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         FortsætBtn.isEnabled=false
-        message.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -63,19 +62,19 @@ class OpretBrugerKontakt: UIViewController {
     
     func erAltTastetInd(text: String) -> Bool {
          if(BTlfnrTextField.text == "" || BTitelTextField.text == "" || BEmailTextField.text == "" || BNavnTextField.text == ""){
-            message.isHidden = true
+//            message.isHidden = true
             if((isValidEmail(email: BEmailTextField.text!) == false) && (BEmailTextField.text! != "")){
-                message.isHidden = false
+//                message.isHidden = false
             }
             return false
         }
         else{
             if(isValidEmail(email: BEmailTextField.text!) == false){
-                message.isHidden = false
+//                message.isHidden = false
                 return false
             }
             else{
-                message.isHidden = true
+//                message.isHidden = true
                 return true
             }
             
