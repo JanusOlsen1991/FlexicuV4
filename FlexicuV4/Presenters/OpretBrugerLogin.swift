@@ -17,7 +17,6 @@ class OpretBrugerLogin: UIViewController {
     @IBOutlet weak var LPassword2TextField: UITextField!
     @IBOutlet weak var LPassword1TextField: UITextField!
     @IBOutlet weak var LEmailTextField: UITextField!
-    @IBOutlet weak var message: UILabel!
     @IBOutlet weak var OpretBtn: UIButton!
     
     var ref:DatabaseReference!
@@ -26,8 +25,9 @@ class OpretBrugerLogin: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         OpretBtn.isEnabled = false
+
         LEmailTextField.text = infoStruct?.BrugEmail
-        message.isHidden = true
+//        message.isHidden = true
         ref = Database.database().reference()
         // Do any additional setup after loading the view.
     }
@@ -82,16 +82,16 @@ class OpretBrugerLogin: UIViewController {
     
     func erAltTastetInd(text: String) -> Bool {
         if(LPassword1TextField.text == "" || LPassword2TextField.text == "" || LEmailTextField.text == ""){
-            message.isHidden = true
+//            message.isHidden = true
             return false
         }
         else{
             if(LPassword1TextField.text != LPassword2TextField.text){
-                message.isHidden = false
+//                message.isHidden = false
                 return false
             }
             else {
-                message.isHidden = true
+//                message.isHidden = true
                 return true
             }
         }

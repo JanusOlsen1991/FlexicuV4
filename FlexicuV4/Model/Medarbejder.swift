@@ -12,16 +12,15 @@ class Medarbejder{
     
     var navn:String
     var foedselsaar:String
-    var adresse = "" // Skal fjernes
     var loen = ""
     var arbejdsomraade:String
     var id:String
     var kommentar = ""
     var ledig = false
     
-    init(navn: String , id: String , foedselsaarr: String, arbejdsomraade:String){
+    init(navn: String, id: String, foedselsaar: String, arbejdsomraade:String){
         self.navn = navn
-        self.foedselsaar = foedselsaarr
+        self.foedselsaar = foedselsaar
         self.id = id
         self.arbejdsomraade = arbejdsomraade
     }

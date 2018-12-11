@@ -33,8 +33,8 @@ class Udlej: UIViewController, UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell
-        cell?.layer.borderWidth = 1.0
-        cell?.layer.borderColor = UIColor.green.cgColor
+        cell?.layer.borderWidth = 3.0
+        cell?.layer.borderColor = HexFarver.hexStringToUIColor(hex: "#427d3c").cgColor
         cell?.layer.cornerRadius = 3.0
         cell?.navn.text = mNavn[indexPath.item]
         cell?.arbejdsområde.text = mArbejdsområde[indexPath.item]
@@ -42,11 +42,9 @@ class Udlej: UIViewController, UICollectionViewDelegate, UICollectionViewDataSou
         return cell!
     }
     
-   // func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let vc = storyboard?.instantiateViewController(withIdentifier: "UdlejMedarbejder") as? UdlejMedarbejder
-        //vc?.name = mNavn[indexPath.item]
-        //vc?.arbejdsområde = mArbejdsområde[indexPath.item]
-        
-        //self.navigationController?.pushViewController(vc!, animated: true)
-    //}
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "lejUdlejMedarbejder") as? LejUdlejMedarbejder
+
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
 }

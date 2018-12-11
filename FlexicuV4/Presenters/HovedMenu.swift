@@ -84,8 +84,12 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
     }
     
     
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.CollectionView3.reloadData()
+        self.CollectionView1.reloadData()
+        self.CollectionView2.reloadData()
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -145,10 +149,14 @@ class HovedMenu: UIViewController, UICollectionViewDelegate,UICollectionViewData
         
         //Test om det er lejede medarbejdere
         if collectionView == CollectionView3 {
-            let viewController1 = storyboard?.instantiateViewController(withIdentifier: "ValgtMedarbejderView") as? MineMedarbejdere
-            
-            
-            self.navigationController?.pushViewController(viewController1!, animated: true)
+            let mineMedarbejdereCV = storyboard?.instantiateViewController(withIdentifier: "ValgtMedarbejderView") as? MineMedarbejdere
+            if(indexPath.row < (VirkSingleton.shared.virksomhed?.medarbejdere.count)!){
+                
+                mineMedarbejdereCV?.medarbejder = Medarbejder(navn: (VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].navn)!, id: (VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].id)!, foedselsaar: (VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].foedselsaar)!, arbejdsomraade: (VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].arbejdsomraade)!)
+                mineMedarbejdereCV?.loen = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].loen
+                mineMedarbejdereCV?.kommentar = VirkSingleton.shared.virksomhed?.medarbejdere[indexPath.item].kommentar
+            }
+            self.navigationController?.pushViewController(mineMedarbejdereCV!, animated: true)
         }
             //Ellers vælg den for egne medarbejdere
             //Gælder begge de andre collections

@@ -46,11 +46,36 @@ class DAO{
         
     }
     
-    func gemMedarbejter(navn: String, alder: String, arbejdsområde:String, loen:String, kommentar:String, startdato:String, slutdato:String){
+    func gemMedarbejder(navn: String, alder: String, arbejdsområde:String, loen:String, kommentar:String, ledig:Bool) -> String{
         let medarb = ref.child("user").child(userID!).child("medarbejdere").childByAutoId()
-        medarb.setValue(["navn": navn, "fødselsår": alder, "loen": loen, "arbejdsområde": arbejdsområde, "kommentar":kommentar])
+        medarb.setValue(["navn": navn, "fødselsår": alder, "loen": loen, "arbejdsområde": arbejdsområde, "kommentar":kommentar, "ledig": ledig])
+        return medarb.key!
         
+    }
+    
+    func gemAftaleIndgaaet(medarbejder: Medarbejder, udlejer: Virksomhed, lejer: Virksomhed, startdato: String, slutdato: String, loen: String, aktiv: Bool){
+        let aftale = ref.child("aftaler").childByAutoId()
+        aftale.setValue(["loen": loen, "startperiode": startdato, "slutperiode":slutdato, "aktiv": aktiv])
+        let aftaleid = aftale.key
+    ref.child("aftaler").child(aftaleid!).child("medarbejder").setValue(["navn": medarbejder.navn, "fødselsår": medarbejder.foedselsaar, "arbejdsområde": medarbejder.arbejdsomraade, "id": medarbejder.id])
         
+    ref.child("aftaler").child(aftaleid!).child("udlejer").setValue(["id": udlejer.id, "virkNavn": udlejer.virkNavn, "virkAdresse": udlejer.virkAdresse, "postnr": udlejer.postnr])
+        
+    ref.child("aftaler").child(aftaleid!).child("lejer").setValue(["id": lejer.id, "virkNavn": lejer.virkNavn, "virkAdresse": lejer.virkAdresse, "postnr": lejer.postnr])
+    }
+    
+    func updateUdlej(aftaleid:String, aktiv: Bool){
+        ref.child("ledig").child(aftaleid).updateChildValues(["aktiv": aktiv])
+    }
+    
+    func gemUdlej(medarbejder:Medarbejder, udlejer:Virksomhed,loen:String,startdato:String,slutdato:String,kommentar:String, aktiv: Bool){
+        
+        let aftale = ref.child("aftaler").childByAutoId()
+        aftale.setValue(["loen": loen, "startperiode": startdato, "slutperiode":slutdato, "aktiv": aktiv])
+        let aftaleid = aftale.key
+    ref.child("aftaler").child(aftaleid!).child("medarbejder").setValue(["navn": medarbejder.navn, "fødselsår": medarbejder.foedselsaar, "arbejdsområde": medarbejder.arbejdsomraade, "id": medarbejder.id])
+        
+    ref.child("aftaler").child(aftaleid!).child("udlejer").setValue(["id": udlejer.id, "virkNavn": udlejer.virkNavn, "virkAdresse": udlejer.virkAdresse, "postnr": udlejer.postnr])
     }
     
     
@@ -66,7 +91,6 @@ class DAO{
         let med2id = med2.key
 
         ref.child("medarbejdere").child(med2id!).setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar": "", "Virksomhedid":userID])
-
 
         let aft1 = ref.child("aftaler").childByAutoId()
         aft1.setValue(["loen": "32000", "startperiode": "1/12-18", "slutperiode": "1/1-19", "aktiv": true])
@@ -90,9 +114,9 @@ class DAO{
         let aft3 = ref.child("aftaler").childByAutoId()
         aft3.setValue(["loen": "32000", "startperiode": "1/12-18", "slutperiode": "1/1-19", "aktiv": true])
         let aft3id = aft3.key
-        ref.child("ledig").child(aft3id!).child("medarbejder").setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar":"", "id": med2id!])
-        ref.child("ledig").child(aft3id!).child("lejer").setValue(["id": virk1id, "virkNavn": VirkSingleton.shared.virksomhed?.virkNavn, "virkAdresse":VirkSingleton.shared.virksomhed?.virkAdresse, "postnr":VirkSingleton.shared.virksomhed?.postnr])
-        ref.child("ledig").child(aft3id!).child("lejer").setValue(["id": virk2id, "virkNavn": VirkSingleton.shared.virksomhed?.virkNavn, "virkAdresse":VirkSingleton.shared.virksomhed?.virkAdresse, "postnr":VirkSingleton.shared.virksomhed?.postnr])
+        ref.child("aftaler").child(aft3id!).child("medarbejder").setValue(["navn": "Janus", "fødselsår": "1991", "adresse": "Herlev", "postnr": "2500", "loen": "32000", "arbejdsområde": "Tømrer", "kommentar":"", "id": med2id!])
+        ref.child("aftaler").child(aft3id!).child("lejer").setValue(["id": virk1id, "virkNavn": VirkSingleton.shared.virksomhed?.virkNavn, "virkAdresse":VirkSingleton.shared.virksomhed?.virkAdresse, "postnr":VirkSingleton.shared.virksomhed?.postnr])
+        ref.child("aftaler").child(aft3id!).child("lejer").setValue(["id": virk2id, "virkNavn": VirkSingleton.shared.virksomhed?.virkNavn, "virkAdresse":VirkSingleton.shared.virksomhed?.virkAdresse, "postnr":VirkSingleton.shared.virksomhed?.postnr])
         
         let aft4 = ref.child("aftaler").childByAutoId()
         aft4.setValue(["loen": "32000", "startperiode": "1/12-18", "slutperiode": "1/1-19", "aktiv": true])
@@ -116,7 +140,7 @@ class DAO{
                     let medloen = childSnapshot["loen"] as? String ?? ""
                     let medkommentar = childSnapshot["kommentar"] as? String ?? ""
                     
-                    let medarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaarr: medaar, arbejdsomraade: medarbejdsom)
+                    let medarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaar: medaar, arbejdsomraade: medarbejdsom)
                     medarbejder.loen = medloen
                     medarbejder.kommentar = medkommentar
                     VirkSingleton.shared.virksomhed?.medarbejdere.append(medarbejder)
@@ -131,14 +155,13 @@ class DAO{
     
     
     func readUdlej(){
-        
         ref.child("ledig").queryOrdered(byChild: "aktiv").queryEqual(toValue: true).observeSingleEvent(of: .value, with: { (snapshot) in
-            //            let aft_array:NSArray = snapshot.children.allObjects as NSArray
+            
             
             for child in snapshot.children.allObjects as! [DataSnapshot]{
+                print("SÅ MANGE LEDIGE",child.childrenCount)
                 
                 
-                //                let snapshot:DataSnapshot = child as! DataSnapshot
                 let aftaleid = child.key
                 
                 let aftvalue = child.value as? NSDictionary
@@ -161,24 +184,18 @@ class DAO{
                 alder = medValue?["fødselsår"] as? String ?? ""
                 arbejdsområde = medValue?["arbejdsområde"] as? String ?? ""
                 
-                
-                //                let udlejSnapshot:DataSnapshot = child as! DataSnapshot
-                let udlejid = childUdlejSnapshot.key
-                //                        getudlejid.key
-                
+            
                 
                 var virkNavn = ""
                 var virkAdresse = ""
                 var postnr = ""
-                
-                
-                if(udlejid != self.userID){
-                    if let udlejValue = childUdlejSnapshot.value as? NSDictionary{
-                        virkNavn = udlejValue["virkNavn"] as? String ?? ""
-                        virkAdresse = udlejValue["virkAdresse"] as? String ?? ""
-                        postnr = udlejValue["postnr"] as? String ?? ""
-                    }
-                    
+                var udlejid = ""
+         
+                if let udlejValue = childUdlejSnapshot.value as? NSDictionary{
+                    virkNavn = udlejValue["virkNavn"] as? String ?? ""
+                    virkAdresse = udlejValue["virkAdresse"] as? String ?? ""
+                    postnr = udlejValue["postnr"] as? String ?? ""
+                    udlejid = udlejValue["id"] as? String ?? ""
                 }
                 
                 if(udlejid == self.userID!){
@@ -189,7 +206,8 @@ class DAO{
                     }
                 }
                 else{
-                    let ledigMedarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaarr: alder, arbejdsomraade: arbejdsområde)
+                    
+                    let ledigMedarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaar: alder, arbejdsomraade: arbejdsområde)
                     let udlejVirksomhed = Virksomhed(virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, id: udlejid)
                     let udlejning = Aftaler(id: aftaleid, medarbejder: ledigMedarbejder, loen: loen, startDato: startperiode, slutDato: slutperiode, udlejer: udlejVirksomhed, indlejer: nil, kommentar: kommentar)
                     
@@ -209,7 +227,6 @@ class DAO{
             
             for child in snapshot.children.allObjects as! [DataSnapshot]{
                 
-                //                let snapshot:DataSnapshot = child as! DataSnapshot
                 let aftaleid = child.key
                 
                 let aftvalue = child.value as? NSDictionary
@@ -217,9 +234,7 @@ class DAO{
                 let startperiode = aftvalue!["startperiode"] as? String ?? ""
                 let slutperiode = aftvalue!["slutperiode"] as? String ?? ""
                 let kommentar = aftvalue!["kommentar"] as? String ?? ""
-             //   print("loen",loen)
-                
-                
+
                 
                 let childMedarbSnapshot = child.childSnapshot(forPath: "medarbejder")
                 let childUdlejSnapshot = child.childSnapshot(forPath: "Udlejer")
@@ -229,8 +244,6 @@ class DAO{
                 var mednavn = ""
                 var alder = ""
                 var arbejdsområde = ""
-                
-            //    print("medid", medid)
                 
                 let medValue = childMedarbSnapshot.value as? NSDictionary
                 mednavn = medValue?["navn"] as? String ?? ""
@@ -250,33 +263,26 @@ class DAO{
                     virkAdresse = udlejValue["virkAdresse"] as? String ?? ""
                     postnr = udlejValue["postnr"] as? String ?? ""
                     udlejid = udlejValue["id"] as? String ?? ""
-                    print("virkudlejNavn:",virkNavn)
                 }
                 if let lejValue = childLejSnapshot.value as? NSDictionary{
                     virkNavn = lejValue["virkNavn"] as? String ?? ""
                     virkAdresse = lejValue["virkAdresse"] as? String ?? ""
                     postnr = lejValue["postnr"] as? String ?? ""
                     lejid = lejValue["id"] as? String ?? ""
-                    print("virkindlejNavn: ",virkNavn)
-                    
                 }
                 
-                print("udlejid:",udlejid, "userId:", self.userID, "lejid:", lejid)
                 if((udlejid == self.userID) || (lejid == self.userID)){
-                    print("Kom igennem if")
-                    let ledigMedarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaarr: alder, arbejdsomraade: arbejdsområde)
+                    let ledigMedarbejder = Medarbejder(navn: mednavn, id: medid, foedselsaar: alder, arbejdsomraade: arbejdsområde)
                     let udlejVirksomhed = Virksomhed(virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, id: udlejid)
                     let lejVirksomhed = Virksomhed(virkNavn: virkNavn, virkAdresse: virkAdresse, postnr: postnr, id: lejid)
                     let aftale = Aftaler(id: aftaleid, medarbejder: ledigMedarbejder, loen: loen, startDato: startperiode, slutDato: slutperiode, udlejer: udlejVirksomhed, indlejer: lejVirksomhed, kommentar: kommentar)
                     print("Startdato:",startperiode)
                     print("Slutdato:",slutperiode)
                     if(udlejid == self.userID){
-                        print("Der kommer en udlejer!!!!")
                         VirkSingleton.shared.udlejedeFolk.append(aftale)
                     }
                     else {
                         VirkSingleton.shared.indlejedeFolk.append(aftale)
-                        print("Der kommer en indlejer!!!!")
                     }
                 }
             }
